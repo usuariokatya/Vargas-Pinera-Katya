@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asturias - HAPPINESS&Co</title>
+        <!-- 1. Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 2. Colores del PDF para Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rosa: '#ba007c',
+                        azul: '#009bdb',
+                        naranja: '#ff7b00',
+                        gris: '#555555'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- 3. Tu CSS propio -->
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav-principal">
+        <div class="logo">HAPPINESS<span>&</span>Co</div>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="calendario.html">Calendario</a></li>
+            <li><a href="asturias.html">Asturias</a></li>
+        </ul>
+        <div class="buscador">
+            <input type="text" placeholder="🔍 Buscar en Asturias...">
+        </div>
+    </nav>
+
+    <main class="galeria-asturias">
+
+        <div class="titulo-seccion">
+            <h1>Eventos en <span>Asturias</span></h1>
+            <p>La cultura más auténtica del Principado</p>
+        </div>
+
+        <div class="grid-galeria">
+
+            <article class="foto-evento">
+                <img src="assets/img/oviedo-festival.jpg" alt="Festival Oviedo">
+                <h3>Festival Internacional de Música</h3>
+                <p>📅 05 Jun 2026</p>
+                <p>📍 Auditorio Príncipe Felipe, Oviedo</p>
+                <a href="evento.html?id=5" class="btn-card">Ver evento</a>
+            </article>
+
+            <article class="foto-evento">
+                <img src="assets/img/gijon-teatro.jpg" alt="Mamma Mia Gijón">
+                <h3>Mamma Mia! El Musical</h3>
+                <p>📅 15 Jun 2026</p>
+                <p>📍 Teatro Jovellanos, Gijón</p>
+                <a href="evento.html?id=6" class="btn-card">Ver evento</a>
+            </article>
+
+            <article class="foto-evento">
+                <img src="assets/img/aviles-expo.jpg" alt="Expo Avilés">
+                <h3>Exposición Arte Contemporáneo</h3>
+                <p>📅 25 Jun 2026</p>
+                <p>📍 Centro Niemeyer, Avilés</p>
+                <a href="evento.html?id=7" class="btn-card">Ver evento</a>
+            </article>
+
+            <article class="foto-evento finalizado">
+                <img src="assets/img/oviedo-concierto.jpg" alt="Concierto Año Nuevo">
+                <h3>Concierto de Año Nuevo</h3>
+                <p>📅 01 Ene 2026</p>
+                <p>📍 Auditorio Oviedo</p>
+                <span class="estado-finalizado">Finalizado</span>
+                <a href="evento.html?id=1" class="btn-card">Ver galería</a>
+            </article>
+
+            <article class="foto-evento finalizado">
+                <img src="assets/img/gijon-clasico.jpg" alt="Bernarda Alba">
+                <h3>La Casa de Bernarda Alba</h3>
+                <p>📅 12 Ene 2026</p>
+                <p>📍 Teatro Gijón</p>
+                <span class="estado-finalizado">Finalizado</span>
+                <a href="evento.html?id=2" class="btn-card">Ver galería</a>
+            </article>
+
+            <article class="foto-evento finalizado">
+                <img src="assets/img/aviles-cine.jpg" alt="Fotografía Invierno">
+                <h3>Fotografía de Invierno</h3>
+                <p>📅 24 Ene 2026</p>
+                <p>📍 Galería Municipal, Avilés</p>
+                <span class="estado-finalizado">Finalizado</span>
+                <a href="evento.html?id=3" class="btn-card">Ver galería</a>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-contenido">
+            <div class="logo-footer">HAPPINESS<span>&</span>Co</div>
+            <nav class="menu-footer">
+                <a href="index.html">Inicio</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="calendario.html">Calendario</a>
+                <a href="asturias.html">Asturias</a>
+            </nav>
+            <div class="redes-sociales">
+                <a href="#" aria-label="Instagram">📷</a>
+                <a href="#" aria-label="Facebook">📘</a>
+                <a href="#" aria-label="Email">✉️</a>
+            </div>
+        </div>
+        <p>© 2026 HAPPINESS&Co. Todos los derechos reservados. Hecho con ♥ en Asturias</p>
+    </footer>
+</body>
+</html>
