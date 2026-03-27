@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario - HAPPINESS&Co</title>
+       <!-- 1. Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 2. Colores del PDF para Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rosa: '#ba007c',
+                        azul: '#009bdb',
+                        naranja: '#ff7b00',
+                        gris: '#555555'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- 3. Tu CSS propio -->
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav-principal">
+        <div class="logo">HAPPINESS<span>&</span>Co</div>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="calendario.html">Calendario</a></li>
+            <li><a href="asturias.html">Asturias</a></li>
+        </ul>
+        <div class="buscador">
+            <input type="text" placeholder="🔍 Buscar por fecha...">
+        </div>
+    </nav>
+
+    <main class="contenedor-calendario">
+        <section class="filtros-mes">
+            <button class="mes-activo">Enero 2026</button>
+            <button class="mes">Febrero 2026</button>
+            <button class="mes">Marzo 2026</button>
+            <button class="mes">Junio 2026</button>
+        </section>
+
+        <!-- ENERO 2026 - FINALIZADOS -->
+        <section class="mes-calendario">
+            <h2 class="titulo-mes">Enero <span>2026</span> — Finalizado ✅</h2>
+            <div class="grid-calendario">
+
+                <article class="dia-calendario finalizado">
+                    <div class="dia-header">
+                        <span class="dia-numero">01</span>
+                        <span class="dia-nombre">Miércoles</span>
+                    </div>
+                    <div class="evento-dia">
+                        <img src="assets/img/concierto-enero.jpg" alt="Concierto Año Nuevo">
+                        <div class="info-evento-dia">
+                            <h3>Concierto Año Nuevo</h3>
+                            <span class="categoria musica">🎵 Música</span>
+                            <span class="estado-finalizado">Finalizado</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="dia-calendario finalizado">
+                    <div class="dia-header">
+                        <span class="dia-numero">12</span>
+                        <span class="dia-nombre">Domingo</span>
+                    </div>
+                    <div class="evento-dia">
+                        <img src="assets/img/teatro-enero.jpg" alt="Bernarda Alba">
+                        <div class="info-evento-dia">
+                            <h3>La Casa de Bernarda Alba</h3>
+                            <span class="categoria teatro">🎭 Teatro</span>
+                            <span class="estado-finalizado">Finalizado</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="dia-calendario finalizado">
+                    <div class="dia-header">
+                        <span class="dia-numero">24</span>
+                        <span class="dia-nombre">Sábado</span>
+                    </div>
+                    <div class="evento-dia">
+                        <img src="assets/img/expo-enero.jpg" alt="Fotografía Invierno">
+                        <div class="info-evento-dia">
+                            <h3>Fotografía de Invierno</h3>
+                            <span class="categoria arte">🎨 Arte</span>
+                            <span class="estado-finalizado">Finalizado</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- JUNIO 2026 - PRÓXIMOS -->
+        <section class="mes-calendario">
+            <h2 class="titulo-mes">Junio <span>2026</span> — Próximos 🔥</h2>
+            <div class="grid-calendario">
+
+                <article class="dia-calendario futuro">
+                    <div class="dia-header">
+                        <span class="dia-numero">05</span>
+                        <span class="dia-nombre">Jueves</span>
+                    </div>
+                    <div class="evento-dia">
+                        <img src="assets/img/festival-junio.jpg" alt="Festival Sonoro">
+                        <div class="info-evento-dia">
+                            <h3>Festival Sonoro</h3>
+                            <span class="categoria musica">🎵 Música</span>
+                            <span class="estado-futuro">Próximo</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="dia-calendario futuro">
+                    <div class="dia-header">
+                        <span class="dia-numero">15</span>
+                        <span class="dia-nombre">Domingo</span>
+                    </div>
+                    <div class="evento-dia">
+                        <img src="assets/img/musical-junio.jpg" alt="Fantasma Ópera">
+                        <div class="info-evento-dia">
+                            <h3>Fantasma de la Ópera</h3>
+                            <span class="categoria teatro">🎭 Teatro</span>
+                            <span class="estado-futuro">Próximo</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="dia-calendario futuro">
+                    <div class="dia-header">
+                        <span class="dia-numero">25</span>
+                        <span class="dia-nombre">Miércoles</span>
+                    </div>
+                    <div class="evento-dia">
+                        <img src="assets/img/expo-junio.jpg" alt="Arte Moderno">
+                        <div class="info-evento-dia">
+                            <h3>Exposición Arte Moderno</h3>
+                            <span class="categoria arte">🎨 Arte</span>
+                            <span class="estado-futuro">Próximo</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FORMULARIO -->
+    <section class="formulario-seccion">
+        <div class="contenedor-form">
+            <h2>¡No te pierdas nada!</h2>
+            <p>Suscríbete o déjanos tus sugerencias</p>
+            <form class="form-suscripcion" action="suscripcion.php" method="POST">
+                <div class="form-grupo">
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="email" name="email" placeholder="tu@email.com" required>
+                </div>
+                <div class="form-grupo">
+                    <input type="tel" name="telefono" placeholder="Teléfono (opcional)">
+                </div>
+                <textarea name="sugerencia" placeholder="¿Qué eventos te gustaría ver? ¿Sugerencias?" rows="4"></textarea>
+                <label class="checkbox-grupo">
+                    <input type="checkbox" name="suscripcion" required>
+                    <span>Acepto recibir newsletter semanal</span>
+                </label>
+                <button type="submit" class="btn-formulario">Suscribirme</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-contenido">
+            <div class="logo-footer">HAPPINESS<span>&</span>Co</div>
+            <nav class="menu-footer">
+                <a href="index.html">Inicio</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="calendario.html">Calendario</a>
+                <a href="asturias.html">Asturias</a>
+            </nav>
+            <div class="redes-sociales">
+                <a href="#" aria-label="Instagram">📷</a>
+                <a href="#" aria-label="Facebook">📘</a>
+                <a href="#" aria-label="Email">✉️</a>
+            </div>
+        </div>
+        <p>© 2026 HAPPINESS&Co. Todos los derechos reservados. Hecho con ♥ en Asturias</p>
+    </footer>
+</body>
+</html>
