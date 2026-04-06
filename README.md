@@ -1,22 +1,34 @@
 # Mi Proyecto: HAPPINESS&Co
 
-Este es el repositorio donde estare subiendo todo el proyecto de la agenda cultural HAPPINESS&Co. 
+Este es el repositorio donde estaré subiendo todo el proyecto de la agenda cultural HAPPINESS&Co.
 
-He organizado el proyecto en las carpetas que nos pedían, aunque algunas todavía están vacías porque no he empezado con esa parte:
+He organizado el proyecto en las carpetas que nos pedían:
 
-* **Lenguaje de marcas**: Empeze a plantear el codigo para tener ya una base de la que partir. De misma forma eh creado el archivo reset de la página web.
-* **Base de datos**: Ya he creado los scripts en Oracle SQL Developer. Tengo listas las tablas de Usuarios, Eventos, Galerías y Favoritos, además de las consultas para consultar los datos. Eh creado en el programa Dia la E-R , de misma forma en el programa Toad.
-* **Programación**: Esta carpeta está pendiente. Aquí es donde subiré el código en Java(probablement lo realize en vs code).
-* **RSS**: Esta carpeta está pendiente. Aquí es donde subiré el código en Java.
+* **Lenguaje de marcas**: He creado las primeras páginas de la web, aunque es posible que las retoque más adelante:
+  - `index.html` — Página principal.
+  - `eventos.html` — Página de eventos próximos y finalizados.
+  - `calendario.html` — Calendario con los eventos por meses.
+  - `asturias.html` — Galería de fotos de eventos en Asturias.
+  - `reset.css` — Reset básico de estilos.
+  - `global.css` — Estilos globales, todavía en progreso.
+  - `style.css` — Estilos específicos de la web, todavía en progreso.
+
+* **Base de datos**: Ya tengo las tablas creadas en Oracle SQL Developer (Usuarios, Eventos, Galerías y Favoritos) y las consultas listas. También tengo hecho el diagrama E-R en Dia y en Toad.
+
+* **Programación**: Pendiente. Aquí iré subiendo el código en Java.
+
+* **RSS**: Pendiente. Aquí iré subiendo el archivo XML con los eventos.
 
 ## Sobre el diseño
-El día 24 terminé el planteamiento de la web (lo que es el dibujo en blanco y negro). Ahora estoy dándole los últimos retoques para que se vea mejor, pero la estructura ya está hecha. En la parte del boceto a color ya eh planteado el como se vería mi web, de todas formas estare retocando algunos detalles.
+
+Primero hice el boceto en blanco y negro para planear la estructura, luego el boceto a color siguiendo la paleta del PDF. Ahora estoy pasándolo a código.
 
 He seguido los colores del PDF:
-- Rosa (#ba007c) para música y logo principal.
-- Azul (#009bdb) para cine y teatro.
-- Naranja (#ff7b00) para las exposiciones.
-- Gris (#555555) para el resto de textos.
+- Rosa `#ba007c` para música y logo.
+- Azul `#009bdb` para cine y teatro.
+- Naranja `#ff7b00` para exposiciones.
+- Gris `#555555` para textos.
 
 ## Lo que he usado
-Para hacer el proyecto estoy trabajando con VS Code para el código, Oracle SQL Developer para la base de datos, Figma para los bocetos de la web y Git para ir guardando todos los cambios con commits diarios.
+
+Para hacer el proyecto estoy trabajando con VS Code para el código, Figma para los bocetos, Oracle SQL Developer para la base de datos y Git para guardar los cambios con commits diarios.
