@@ -56,6 +56,12 @@ Cosas que no sabía antes y he ido aprendiendo mientras hacía el proyecto:
 
 - **JavaScript para los filtros** — usé `data-categoria` en los botones y `addEventListener` para mostrar u ocultar los eventos según la categoría elegida. También lee el parámetro `?cat=` de la URL para llegar con un filtro ya aplicado desde `index.html`.
 
+- - **`URLSearchParams` y `window.location.search`** — lo uso en `eventos.html` para leer el parámetro `?cat=` de la URL. Así cuando pulsas una categoría desde `index.html`, llegas a `eventos.html` con el filtro ya aplicado automáticamente.
+
+- **`window.location.href`** — lo uso para redirigir al usuario a `eventos.html` con la categoría ya seleccionada al pulsar una card desde la página principal.
+
+- **`<video>` con `autoplay`, `muted` y `loop`** — el `<video>` tuve que buscar por mi cuenta que si no pones `muted` junto con `autoplay`, los navegadores bloquean el vídeo y no se reproduce solo. Con `loop` se repite en bucle.
+
 ## Lo que he usado
 
 Para hacer el proyecto estoy trabajando con VS Code para el código, Figma para los bocetos, Oracle SQL Developer y TOAD para la base de datos, y Git para guardar los cambios con commits. Para la web uso HTML5, CSS propio, Tailwind CSS y JavaScript.
