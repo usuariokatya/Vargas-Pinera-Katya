@@ -52,6 +52,10 @@ Cosas que no sabía antes y he ido aprendiendo mientras hacía el proyecto:
 
 - **RSS 2.0 en vez de 1.0** — La versión 1.0 que usamos normalmente en clase está basada en RDF, que es más compleja. La 2.0 es más sencilla y directa: solo necesitas `<channel>` e `<item>` para publicar eventos con título, descripción y fecha. Por eso la usé para este proyecto.
 
+- **JavaScript para el calendario** — generé las filas y celdas del calendario dinámicamente con `new Date()` y `.getMonth()`. El calendario se actualiza solo al pulsar Anterior / Siguiente sin recargar la página.
+
+- **JavaScript para los filtros** — usé `data-categoria` en los botones y `addEventListener` para mostrar u ocultar los eventos según la categoría elegida. También lee el parámetro `?cat=` de la URL para llegar con un filtro ya aplicado desde `index.html`.
+
 ## Lo que he usado
 
 Para hacer el proyecto estoy trabajando con VS Code para el código, Figma para los bocetos, Oracle SQL Developer y TOAD para la base de datos, y Git para guardar los cambios con commits. Para la web uso HTML5, CSS propio, Tailwind CSS y JavaScript.
