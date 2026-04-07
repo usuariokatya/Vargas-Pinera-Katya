@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAPPINESS&Co - Agenda Cultural</title>
-        <!-- 1. Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- 2. Colores del PDF para Tailwind -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -16,156 +13,262 @@
                         rosa: '#ba007c',
                         azul: '#009bdb',
                         naranja: '#ff7b00',
-                        gris: '#555555'
+                        gris: '#555555',
                     }
                 }
             }
         }
     </script>
-
-    <!-- 3. Tu CSS propio -->
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style/global.css" />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <title>Happiness &amp; Co</title>
 </head>
-<body>
-    <nav class="nav-principal">
-        <div class="logo">HAPPINESS<span>&</span>Co</div>
-        <ul class="menu">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="eventos.html">Eventos</a></li>
-            <li><a href="calendario.html">Calendario</a></li>
-            <li><a href="asturias.html">Asturias</a></li>
-        </ul>
-        <div class="buscador">
-            <input type="text" placeholder="🔍 Buscar eventos...">
-        </div>
-    </nav>
 
-    <header class="hero">
-        <h1>Cultura que <span>emociona</span></h1>
-        <p>Descubre los mejores eventos de Asturias. Música, teatro, exposiciones y mucho más.</p>
-        <div class="botones-hero">
-            <a href="eventos.html" class="btn-hero">Explora eventos 🗓️</a>
-            <a href="asturias.html" class="btn-hero">Eventos Asturias 📍</a>
-        </div>
-        <div class="stats-hero">
-            <div class="stat"><strong>500+</strong><span>Eventos</span></div>
-            <div class="stat"><strong>50+</strong><span>Ubicaciones</span></div>
-            <div class="stat"><strong>1000+</strong><span>Artistas</span></div>
-            <div class="stat"><strong>24/7</strong><span>Actualizado</span></div>
-        </div>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="assets/imagenes/happines-and-co-propuesta-02.jpg" alt="Logo Happiness &amp; Co" width="180"
+                    height="60" />
+            </a>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                <li><a href="asturias.html">Asturias</a></li>
+            </ul>
+
+            <div class="header-tools flex items-center gap-4">
+                <form action="#" method="get" role="search" class="search-form">
+                    <label for="buscar" class="sr-only">Buscar</label>
+                    <input type="search" id="buscar" name="buscar" placeholder="Buscar..." />
+                    <button type="submit" aria-label="Buscar">🔍</button>
+                </form>
+            </div>
+        </nav>
     </header>
 
-    <section class="filtros">
-        <button class="filtro-activo">Todos los eventos ✨</button>
-        <button class="filtro musica">Música 🎶</button>
-        <button class="filtro cine">Cine 🎬</button>
-        <button class="filtro teatro">Teatro 🎭</button>
-        <button class="filtro arte">Arte 🎨</button>
-        <button class="filtro danza">Danza 💃</button>
-        <button class="filtro festivales">Festivales 🎉</button>
-    </section>
+    <main>
 
-    <main class="contenedor-eventos">
-        <div class="titulo-seccion">
-            <h2>Todos los <span>eventos</span></h2>
-            <p>8 eventos disponibles esta semana</p>
-        </div>
+        <!-- HERO -->
+        <section id="inicio">
+            <img src="assets/imagenes/fondo.jpg" alt="Cudillero" width="1440" height="810" loading="eager" />
+            
+            <img src="assets/imagenes/happines-and-co-upper-01.png" class="deco-ampersand w-24 left-10 top-20 opacity-40" alt="" />
+            <img src="assets/imagenes/happines-and-co-upper-02.png" class="deco-ampersand w-32 right-1/4 bottom-1/4 opacity-30" alt="" />
+            <img src="assets/imagenes/happines-and-co-upper-03.png" class="deco-ampersand w-16 left-1/3 top-1/2 opacity-20" alt="" />
+            <img src="assets/imagenes/happines-and-co-upper-04.png" class="deco-ampersand w-40 right-10 top-1/2 opacity-40" alt="" />
 
-        <div class="grid-eventos">
-            <article class="evento-card">
-                <div class="card-imagen">
-                    <img src="assets/img/boombastic.jpg" alt="Boombastic Festival">
-                    <span class="badge musica">Música</span>
-                    <span class="precio">25€</span>
+            <div class="hero-content">
+                <h1 class="titulo-multicolor"><span class="texto-blanco">Cultura</span> <span>que emociona</span></h1>
+                <p>Descubre los mejores eventos de Asturias. Música, teatro, exposiciones y mucho más en un solo lugar.</p>
+                <div class="hero-botones">
+                    <a href="eventos.html" class="boton-primario">Explora eventos</a>
+                    <a href="asturias.html" class="boton-secundario">Eventos Asturias</a>
                 </div>
-                <div class="card-contenido">
-                    <h3>Boombastic Festival</h3>
-                    <p>Festival de música electrónica con DJs internacionales</p>
-                    <div class="evento-info">
-                        <span>📅 05 Jun 2026</span>
-                        <span>📍 Auditorio Príncipe Felipe</span>
-                    </div>
-                    <a href="evento.html?id=1" class="btn-card">Ver detalles</a>
-                </div>
-            </article>
+            </div>
 
-            <article class="evento-card">
-                <div class="card-imagen">
-                    <img src="assets/img/mamma-mia.jpg" alt="Mamma Mia Musical">
-                    <span class="badge teatro">Teatro</span>
-                    <span class="precio">35€</span>
-                </div>
-                <div class="card-contenido">
-                    <h3>Mamma Mia! El Musical</h3>
-                    <p>El fenómeno mundial de ABBA llega a Gijón</p>
-                    <div class="evento-info">
-                        <span>📅 15 Jun 2026</span>
-                        <span>📍 Teatro Jovellanos</span>
-                    </div>
-                    <a href="evento.html?id=2" class="btn-card">Ver detalles</a>
-                </div>
-            </article>
+            <ul class="hero-stats">
+                <li>
+                    <strong class="color-rosa">500+</strong>
+                    <span>Eventos</span>
+                </li>
+                <li>
+                    <strong class="color-azul">50+</strong>
+                    <span>Ubicaciones</span>
+                </li>
+                <li>
+                    <strong class="color-naranja">1000+</strong>
+                    <span>Artistas</span>
+                </li>
+                <li>
+                    <strong>24/7</strong>
+                    <span>Actualizado</span>
+                </li>
+            </ul>
+        </section>
 
-            <article class="evento-card">
-                <div class="card-imagen">
-                    <img src="assets/img/cine-invierno.jpg" alt="Cine de Invierno">
-                    <span class="badge cine">Cine</span>
-                    <span class="precio">10€</span>
-                </div>
-                <div class="card-contenido">
-                    <h3>Cine de Invierno</h3>
-                    <p>Ciclo de cine clásico en sala histórica</p>
-                    <div class="evento-info">
-                        <span>📅 12 Ene 2026</span>
-                        <span>📍 Sala Nordés</span>
-                    </div>
-                    <a href="evento.html?id=3" class="btn-card">Ver detalles</a>
-                </div>
-            </article>
+        <!-- FILTROS -->
+        <nav id="filtros" aria-label="Categorías de eventos">
+            <ul>
+                <li><a href="eventos.html?cat=todos" data-categoria="todos">Todos</a></li>
+                <li><a href="eventos.html?cat=musica" data-categoria="musica">Música</a></li>
+                <li><a href="eventos.html?cat=cine" data-categoria="cine">Cine</a></li>
+                <li><a href="eventos.html?cat=teatro" data-categoria="teatro">Teatro</a></li>
+                <li><a href="eventos.html?cat=arte" data-categoria="arte">Arte</a></li>
+                <li><a href="eventos.html?cat=danza" data-categoria="danza">Danza</a></li>
+                <li><a href="eventos.html?cat=festivales" data-categoria="festivales">Festivales</a></li>
+            </ul>
+        </nav>
 
-            <article class="evento-card">
-                <div class="card-imagen">
-                    <img src="assets/img/expo-fotografia.jpg" alt="Exposición Fotografía">
-                    <span class="badge arte">Arte</span>
-                    <span class="precio">Gratis</span>
+        <!-- EVENTOS -->
+        <section id="eventos" aria-labelledby="titulo-eventos">
+            <h2 id="titulo-eventos" class="titulo-multicolor">Todos los eventos</h2>
+            <p>8 eventos disponibles</p>
+            <ul id="lista-eventos">
+                <li>
+                    <article class="evento-card card-musica">
+                        <img src="assets/imagenes/boombastic-2023_98.webp" alt="Festival Boombastic" width="300"
+                            height="200" loading="lazy" />
+                        <h3>Boombastic <span class="badge-verificado badge-rosa">✓</span></h3>
+                        <p>Es un macrofestival líder de música urbana, pop y electrónica celebrado en La Morgal,
+                            Llanera.</p>
+                        <div class="bottom-info">
+                            <p class="stats">👥 45k &nbsp; ❤️ 12k</p>
+                            <a href="eventos.html" class="boton-follow">Follow +</a>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="evento-card card-entretenimiento">
+                        <img src="assets/imagenes/mammamia.webp" alt="Musical Mamma Mia" width="300" height="200"
+                            loading="lazy" />
+                        <h3>Mamma mia! <span class="badge-verificado badge-azul">✓</span></h3>
+                        <p>El Musical está basado en los 23 grandes éxitos de ABBA tales como Dancing Queen, Gimme
+                            Gimme, Chiquitita o The Winner Takes It All, entre otras.</p>
+                        <div class="bottom-info">
+                            <p class="stats">👥 8.2k &nbsp; ❤️ 2.1k</p>
+                            <a href="eventos.html" class="boton-follow">Follow +</a>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="evento-card card-entretenimiento">
+                        <img src="assets/imagenes/ocinefresnos.jpg" alt="Ocine los Fresnos" width="300" height="200"
+                            loading="lazy" />
+                        <h3>Ocine los fresnos <span class="badge-verificado badge-azul">✓</span></h3>
+                        <p>Sala de entretenimiento localizado en el centro de Asturias.</p>
+                        <div class="bottom-info">
+                            <p class="stats">👥 1.5k &nbsp; ❤️ 430</p>
+                            <a href="eventos.html" class="boton-follow">Follow +</a>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="evento-card card-arte">
+                        <img src="assets/imagenes/2022-MuseoBellasArtes.jpg" alt="Museo de Bellas Artes" width="300"
+                            height="200" loading="lazy" />
+                        <h3>Museo de Bellas Artes <span class="badge-verificado badge-naranja">✓</span></h3>
+                        <p>Museo de bellas artes con obras desde el medievo hasta el s. XX de artistas españoles,
+                            italianos y flamencos.</p>
+                        <div class="bottom-info">
+                            <p class="stats">👥 3.1k &nbsp; ❤️ 850</p>
+                            <a href="eventos.html" class="boton-follow">Follow +</a>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="evento-card card-entretenimiento">
+                        <img src="assets/imagenes/TARZAN.jpg" alt="Tarzán el Musical" width="300" height="200"
+                            loading="lazy" />
+                        <h3>Tarzán <span class="badge-verificado badge-azul">✓</span></h3>
+                        <p>Llega a España la adaptación del clásico de la literatura, basada en la legendaria historia
+                            del Conde de Greystoke creada por Edgar Rice Burroughs.</p>
+                        <div class="bottom-info">
+                            <p class="stats">👥 5.4k &nbsp; ❤️ 1.2k</p>
+                            <a href="eventos.html" class="boton-follow">Follow +</a>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="evento-card card-arte">
+                        <img src="assets/imagenes/arte.webp" alt="Arte Velásquez" width="300" height="200"
+                            loading="lazy" />
+                        <h3>Arte Velásquez <span class="badge-verificado badge-naranja">✓</span></h3>
+                        <p>Arte realizado por mano de obra gijionesa.</p>
+                        <div class="bottom-info">
+                            <p class="stats">👥 920 &nbsp; ❤️ 185</p>
+                            <a href="eventos.html" class="boton-follow">Follow +</a>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="evento-card card-entretenimiento">
+                        <img src="assets/imagenes/cineyelmo.jpeg" alt="Cine Yelmo Ocimax" width="300" height="200"
+                            loading="lazy" />
+                        <h3>Cine Yelmo Ocimax <span class="badge-verificado badge-azul">✓</span></h3>
+                        <p>Cadena de modernos cines multisala con películas de estreno, reestreno o espectáculos en
+                            directo.</p>
+                        <div class="bottom-info">
+                            <p class="stats">👥 2.3k &nbsp; ❤️ 610</p>
+                            <a href="eventos.html" class="boton-follow">Follow +</a>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="evento-card card-musica">
+                        <img src="assets/imagenes/metropoli.jpg" alt="Festival Metrópolis" width="300" height="200"
+                            loading="lazy" />
+                        <h3>Metropolis <span class="badge-verificado badge-rosa">✓</span></h3>
+                        <p>Ofrece más de 10 días de conciertos, cómic, videojuegos, gastronomía, deportes extremos y
+                            humor.</p>
+                        <div class="bottom-info">
+                            <p class="stats">👥 18k &nbsp; ❤️ 4.5k</p>
+                            <a href="eventos.html" class="boton-follow">Follow +</a>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <section id="zona-premium">
+            <img src="assets/imagenes/fondo2.jpg" class="fondo-seccion" alt="" />
+            
+            <div class="contenido-seccion">
+                <h2>Vive la magia cultural</h2>
+                <p class="intro">Un recorrido visual por los eventos más emocionantes que Asturias tiene para ofrecer</p>
+                
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/a9QjZrSNxUs" title="Qué ver en Asturias" allowfullscreen></iframe>
                 </div>
-                <div class="card-contenido">
-                    <h3>Exposición Fotografía Urbana</h3>
-                    <p>Las calles de Asturias capturadas por 10 fotógrafos</p>
-                    <div class="evento-info">
-                        <span>📅 24 Ene 2026</span>
-                        <span>📍 Centro Niemeyer</span>
-                    </div>
-                    <a href="evento.html?id=4" class="btn-card">Ver detalles</a>
+
+                <ul class="stats-grid">
+                    <li class="stat-item">
+                        <strong class="color-rosa">500+</strong>
+                        <span>Conciertos</span>
+                    </li>
+                    <li class="stat-item">
+                        <strong class="color-azul">300+</strong>
+                        <span>Obras</span>
+                    </li>
+                    <li class="stat-item">
+                        <strong class="color-naranja">200+</strong>
+                        <span>Exposiciones</span>
+                    </li>
+                    <li class="stat-item">
+                        <strong>350+</strong>
+                        <span>Festivales</span>
+                    </li>
+                </ul>
+
+                <div class="mision-caja">
+                    <h2>Nuestra Misión</h2>
+                    <p>Crear una plataforma centralizada donde los amantes de la cultura puedan descubrir, explorar y disfrutar de la rica oferta cultural de nuestra ciudad. Queremos que cada día sea una oportunidad para vivir nuevas experiencias.</p>
                 </div>
-            </article>
-        </div>
+            </div>
+        </section>
+
     </main>
 
-    <section class="seccion-video">
-        <h2>Vive la <span>mágia cultural</span></h2>
-        <div class="contenedor-video">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Cultura Asturias" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </section>
+    <footer class="footer-premium">
+        <img src="assets/imagenes/fondo.jpg" class="footer-bg" alt="" />
+        
+        <img src="assets/imagenes/happines-and-co-upper-01.png" class="deco-ampersand w-16 left-10 bottom-10" alt="" />
+        <img src="assets/imagenes/happines-and-co-upper-02.png" class="deco-ampersand w-20 right-40 top-10" alt="" />
+        <img src="assets/imagenes/happines-and-co-upper-04.png" class="deco-ampersand w-12 left-1/3 top-1/4" alt="" />
 
-    <footer class="footer">
         <div class="footer-contenido">
-            <div class="logo-footer">HAPPINESS<span>&</span>Co</div>
-            <nav class="menu-footer">
-                <a href="index.html">Inicio</a>
-                <a href="eventos.html">Eventos</a>
-                <a href="calendario.html">Calendario</a>
-                <a href="asturias.html">Asturias</a>
-            </nav>
-            <div class="redes-sociales">
-                <a href="#" aria-label="Instagram">📷</a>
-                <a href="#" aria-label="Facebook">📘</a>
-                <a href="#" aria-label="Email">✉️</a>
+            <div class="footer-logo">
+                <img src="assets/imagenes/happines-and-co-propuesta-02.jpg" alt="Logo Happiness &amp; Co" width="300" height="80" />
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 HAPPINESS&amp;Co. Todos los derechos reservados. Hecho con ❤️ en Asturias</p>
             </div>
         </div>
-        <p>© 2026 HAPPINESS&Co. Todos los derechos reservados. Hecho con ♥ en Asturias</p>
     </footer>
+
 </body>
+
 </html>
