@@ -46,11 +46,21 @@ Cosas que no sabía antes y he ido aprendiendo mientras hacía el proyecto:
 
 - **`tailwind.config`** — La configuración de Tailwind para añadir mis propios colores y usarlos como clases directamente en el HTML.
 
-- **`data-categoria="musica"`** — Un atributo personalizado que le puse a los botones de filtro. JavaScript lo lee para saber qué categoría pulsó el usuario y mostrar solo esos eventos.
-
-- **`new Date()` y `.getMonth()`** — Funciones de JavaScript para trabajar con fechas en el calendario. Dato: en JavaScript enero es el mes 0, no el 1.
-
 - **RSS 2.0 en vez de 1.0** — La versión 1.0 que usamos normalmente en clase está basada en RDF, que es más compleja. La 2.0 es más sencilla y directa: solo necesitas `<channel>` e `<item>` para publicar eventos con título, descripción y fecha. Por eso la usé para este proyecto.
+
+## Lo que he aprendido por mi cuenta
+
+Estas cosas no las hemos visto todavía en clase, las fui aprendiendo yo sola mientras hacía el proyecto:
+
+- **JavaScript para el calendario** — generé las filas y celdas del calendario dinámicamente con `new Date()` y `.getMonth()`. El calendario se actualiza solo al pulsar Anterior / Siguiente sin recargar la página. Dato: en JavaScript enero es el mes 0, no el 1.
+
+- **JavaScript para los filtros** — usé `data-categoria` en los botones y `addEventListener` para mostrar u ocultar los eventos según la categoría elegida.
+
+- **`URLSearchParams` y `window.location.search`** — lo uso en `eventos.html` para leer el parámetro `?cat=` de la URL. Así cuando pulsas una categoría desde `index.html`, llegas a `eventos.html` con el filtro ya aplicado automáticamente.
+
+- **`window.location.href`** — lo uso para redirigir al usuario a `eventos.html` con la categoría ya seleccionada al pulsar una card desde la página principal.
+
+- **`<video>` con `autoplay`, `muted` y `loop`** — tuve que buscar por mi cuenta que si no pones `muted` junto con `autoplay`, los navegadores bloquean el vídeo y no se reproduce solo. Con `loop` se repite en bucle.
 
 ## Lo que he usado
 

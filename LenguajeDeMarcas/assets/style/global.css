@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+/* ================================
+   GLOBAL.CSS — Estilos base
+   Happiness & Co
+================================ */
+
+>>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 /* Importar fuente desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
 
@@ -13,6 +21,18 @@
     --color-gris: #555555;
 }
 
+<<<<<<< HEAD
+=======
+/* Reset básico */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+>>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 /* Fuente y fondo base */
 body {
     font-family: 'Poppins', sans-serif;
