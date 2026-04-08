@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -40,7 +40,7 @@
             </ul>
 
             <div class="header-tools flex items-center gap-4">
-                <form action="#" method="get" role="search" class="search-form">
+                <form action="eventos.html" method="get" role="search" class="search-form">
                     <label for="buscar" class="sr-only">Buscar</label>
                     <input type="search" id="buscar" name="buscar" placeholder="Buscar..." />
                     <button type="submit" aria-label="Buscar">🔍</button>
@@ -54,7 +54,6 @@
         <!-- HERO -->
         <section id="inicio">
             <img src="assets/imagenes/fondo.jpg" alt="Cudillero" width="1440" height="810" loading="eager" />
-<<<<<<< HEAD
 
             <img src="assets/imagenes/happines-and-co-upper-01.png"
                 class="deco-ampersand w-24 left-10 top-20 opacity-40" alt="" />
@@ -89,7 +88,7 @@
                     <span>Artistas</span>
                 </li>
                 <li>
-                    <strong>24/7</strong>
+                    <strong class="text-white">24/7</strong>
                     <span>Actualizado</span>
                 </li>
             </ul>
@@ -99,72 +98,32 @@
         <nav id="filtros" aria-label="Categorías de eventos">
             <ul>
                 <li><a href="eventos.html?cat=todos" data-categoria="todos">Todos</a></li>
-                <li><a href="eventos.html?cat=musica" data-categoria="musica">Música</a></li>
                 <li><a href="eventos.html?cat=cine" data-categoria="cine">Cine</a></li>
                 <li><a href="eventos.html?cat=teatro" data-categoria="teatro">Teatro</a></li>
                 <li><a href="eventos.html?cat=arte" data-categoria="arte">Arte</a></li>
-                <li><a href="eventos.html?cat=danza" data-categoria="danza">Danza</a></li>
                 <li><a href="eventos.html?cat=festivales" data-categoria="festivales">Festivales</a></li>
             </ul>
         </nav>
 
-=======
-            
-            <img src="assets/imagenes/happines-and-co-upper-01.png" class="deco-ampersand w-24 left-10 top-20 opacity-40" alt="" />
-            <img src="assets/imagenes/happines-and-co-upper-02.png" class="deco-ampersand w-32 right-1/4 bottom-1/4 opacity-30" alt="" />
-            <img src="assets/imagenes/happines-and-co-upper-03.png" class="deco-ampersand w-16 left-1/3 top-1/2 opacity-20" alt="" />
-            <img src="assets/imagenes/happines-and-co-upper-04.png" class="deco-ampersand w-40 right-10 top-1/2 opacity-40" alt="" />
-
-            <div class="hero-content">
-                <h1 class="titulo-multicolor"><span class="texto-blanco">Cultura</span> <span>que emociona</span></h1>
-                <p>Descubre los mejores eventos de Asturias. Música, teatro, exposiciones y mucho más en un solo lugar.</p>
-                <div class="hero-botones">
-                    <a href="eventos.html" class="boton-primario">Explora eventos</a>
-                    <a href="asturias.html" class="boton-secundario">Eventos Asturias</a>
-                </div>
-            </div>
-
-            <ul class="hero-stats">
-                <li>
-                    <strong class="color-rosa">500+</strong>
-                    <span>Eventos</span>
-                </li>
-                <li>
-                    <strong class="color-azul">50+</strong>
-                    <span>Ubicaciones</span>
-                </li>
-                <li>
-                    <strong class="color-naranja">1000+</strong>
-                    <span>Artistas</span>
-                </li>
-                <li>
-                    <strong>24/7</strong>
-                    <span>Actualizado</span>
-                </li>
-            </ul>
-        </section>
-
-        <!-- FILTROS -->
-        <nav id="filtros" aria-label="Categorías de eventos">
-            <ul>
-                <li><a href="eventos.html?cat=todos" data-categoria="todos">Todos</a></li>
-                <li><a href="eventos.html?cat=musica" data-categoria="musica">Música</a></li>
-                <li><a href="eventos.html?cat=cine" data-categoria="cine">Cine</a></li>
-                <li><a href="eventos.html?cat=teatro" data-categoria="teatro">Teatro</a></li>
-                <li><a href="eventos.html?cat=arte" data-categoria="arte">Arte</a></li>
-                <li><a href="eventos.html?cat=danza" data-categoria="danza">Danza</a></li>
-                <li><a href="eventos.html?cat=festivales" data-categoria="festivales">Festivales</a></li>
-            </ul>
-        </nav>
-
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
         <!-- EVENTOS -->
         <section id="eventos" aria-labelledby="titulo-eventos">
             <h2 id="titulo-eventos" class="titulo-multicolor">Todos los eventos</h2>
-            <p>8 eventos disponibles</p>
+            <p>9 eventos disponibles</p>
             <ul id="lista-eventos">
                 <li>
-                    <article class="evento-card card-musica">
+                    <article class="evento-card card-teatro">
+                        <img src="assets/imagenes/teatro.jpg" alt="Teatro en Asturias" width="300"
+                            height="200" loading="lazy" style="object-fit: cover; height: 220px;" />
+                        <h3>Teatro Asturias <span class="badge-verificado badge-azul">✓</span></h3>
+                        <p>Disfruta de esta obra de teatro en Asturias (24 de enero de 2026). Una increíble puesta en escena llena de emoción y talento local.</p>
+                        <div class="bottom-info">
+                            <p class="stats">👥 3.2k &nbsp; ❤️ 950</p>
+                            <a href="calendario.html?follow_evento=Teatro%20Asturias#propuesta" class="boton-follow">Follow +</a>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="evento-card card-festivales">
                         <img src="assets/imagenes/boombastic-2023_98.webp" alt="Festival Boombastic" width="300"
                             height="200" loading="lazy" />
                         <h3>Boombastic <span class="badge-verificado badge-rosa">✓</span></h3>
@@ -172,12 +131,12 @@
                             Llanera.</p>
                         <div class="bottom-info">
                             <p class="stats">👥 45k &nbsp; ❤️ 12k</p>
-                            <a href="eventos.html" class="boton-follow">Follow +</a>
+                            <a href="calendario.html?follow_evento=Boombastic#propuesta" class="boton-follow">Follow +</a>
                         </div>
                     </article>
                 </li>
                 <li>
-                    <article class="evento-card card-entretenimiento">
+                    <article class="evento-card card-teatro">
                         <img src="assets/imagenes/mammamia.webp" alt="Musical Mamma Mia" width="300" height="200"
                             loading="lazy" />
                         <h3>Mamma mia! <span class="badge-verificado badge-azul">✓</span></h3>
@@ -185,19 +144,19 @@
                             Gimme, Chiquitita o The Winner Takes It All, entre otras.</p>
                         <div class="bottom-info">
                             <p class="stats">👥 8.2k &nbsp; ❤️ 2.1k</p>
-                            <a href="eventos.html" class="boton-follow">Follow +</a>
+                            <a href="calendario.html?follow_evento=Mamma%20mia!#propuesta" class="boton-follow">Follow +</a>
                         </div>
                     </article>
                 </li>
                 <li>
-                    <article class="evento-card card-entretenimiento">
+                    <article class="evento-card card-cine">
                         <img src="assets/imagenes/ocinefresnos.jpg" alt="Ocine los Fresnos" width="300" height="200"
                             loading="lazy" />
                         <h3>Ocine los fresnos <span class="badge-verificado badge-azul">✓</span></h3>
                         <p>Sala de entretenimiento localizado en el centro de Asturias.</p>
                         <div class="bottom-info">
                             <p class="stats">👥 1.5k &nbsp; ❤️ 430</p>
-                            <a href="eventos.html" class="boton-follow">Follow +</a>
+                            <a href="calendario.html?follow_evento=Ocine%20los%20fresnos#propuesta" class="boton-follow">Follow +</a>
                         </div>
                     </article>
                 </li>
@@ -210,12 +169,12 @@
                             italianos y flamencos.</p>
                         <div class="bottom-info">
                             <p class="stats">👥 3.1k &nbsp; ❤️ 850</p>
-                            <a href="eventos.html" class="boton-follow">Follow +</a>
+                            <a href="calendario.html?follow_evento=Museo%20de%20Bellas%20Artes#propuesta" class="boton-follow">Follow +</a>
                         </div>
                     </article>
                 </li>
                 <li>
-                    <article class="evento-card card-entretenimiento">
+                    <article class="evento-card card-teatro">
                         <img src="assets/imagenes/TARZAN.jpg" alt="Tarzán el Musical" width="300" height="200"
                             loading="lazy" />
                         <h3>Tarzán <span class="badge-verificado badge-azul">✓</span></h3>
@@ -223,7 +182,7 @@
                             del Conde de Greystoke creada por Edgar Rice Burroughs.</p>
                         <div class="bottom-info">
                             <p class="stats">👥 5.4k &nbsp; ❤️ 1.2k</p>
-                            <a href="eventos.html" class="boton-follow">Follow +</a>
+                            <a href="calendario.html?follow_evento=Tarzán#propuesta" class="boton-follow">Follow +</a>
                         </div>
                     </article>
                 </li>
@@ -235,12 +194,12 @@
                         <p>Arte realizado por mano de obra gijionesa.</p>
                         <div class="bottom-info">
                             <p class="stats">👥 920 &nbsp; ❤️ 185</p>
-                            <a href="eventos.html" class="boton-follow">Follow +</a>
+                            <a href="calendario.html?follow_evento=Arte%20Velásquez#propuesta" class="boton-follow">Follow +</a>
                         </div>
                     </article>
                 </li>
                 <li>
-                    <article class="evento-card card-entretenimiento">
+                    <article class="evento-card card-cine">
                         <img src="assets/imagenes/cineyelmo.jpeg" alt="Cine Yelmo Ocimax" width="300" height="200"
                             loading="lazy" />
                         <h3>Cine Yelmo Ocimax <span class="badge-verificado badge-azul">✓</span></h3>
@@ -248,12 +207,12 @@
                             directo.</p>
                         <div class="bottom-info">
                             <p class="stats">👥 2.3k &nbsp; ❤️ 610</p>
-                            <a href="eventos.html" class="boton-follow">Follow +</a>
+                            <a href="calendario.html?follow_evento=Cine%20Yelmo%20Ocimax#propuesta" class="boton-follow">Follow +</a>
                         </div>
                     </article>
                 </li>
                 <li>
-                    <article class="evento-card card-musica">
+                    <article class="evento-card card-festivales">
                         <img src="assets/imagenes/metropoli.jpg" alt="Festival Metrópolis" width="300" height="200"
                             loading="lazy" />
                         <h3>Metropolis <span class="badge-verificado badge-rosa">✓</span></h3>
@@ -261,8 +220,19 @@
                             humor.</p>
                         <div class="bottom-info">
                             <p class="stats">👥 18k &nbsp; ❤️ 4.5k</p>
-                            <a href="eventos.html" class="boton-follow">Follow +</a>
+                            <a href="calendario.html?follow_evento=Metropolis#propuesta" class="boton-follow">Follow +</a>
                         </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="evento-card" style="background: white; border: 2px solid #f0f0f0; padding: 2rem; display: flex; flex-direction: column;">
+                        <h3 class="titulo-multicolor mb-4 text-xl" style="text-align: center;"><span>Ranking</span> <span>Actual</span> 🏆</h3>
+                        <div style="flex-grow: 1; overflow-y: auto; max-height: 280px; padding-right: 0.5rem;" class="custom-scrollbar">
+                            <ol id="ranking-list" style="display: flex; flex-direction: column; gap: 0.5rem; list-style: none; padding-left: 0; margin-bottom: 0;">
+                                <!-- El ranking se inyectará por JS -->
+                            </ol>
+                        </div>
+                        <p style="text-align: center; color: #888; font-size: 0.8rem; margin-top: 1rem;">Dale a "Follow +" en cualquier evento para que suba de puesto 🚀</p>
                     </article>
                 </li>
             </ul>
@@ -270,7 +240,6 @@
 
         <section id="zona-premium">
             <img src="assets/imagenes/fondo2.jpg" class="fondo-seccion" alt="" />
-<<<<<<< HEAD
 
             <div class="contenido-seccion">
                 <h2>Vive la magia cultural</h2>
@@ -280,15 +249,6 @@
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/a9QjZrSNxUs" title="Qué ver en Asturias"
                         allowfullscreen></iframe>
-=======
-            
-            <div class="contenido-seccion">
-                <h2>Vive la magia cultural</h2>
-                <p class="intro">Un recorrido visual por los eventos más emocionantes que Asturias tiene para ofrecer</p>
-                
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/a9QjZrSNxUs" title="Qué ver en Asturias" allowfullscreen></iframe>
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
                 </div>
 
                 <ul class="stats-grid">
@@ -305,20 +265,16 @@
                         <span>Exposiciones</span>
                     </li>
                     <li class="stat-item">
-                        <strong>350+</strong>
+                        <strong class="text-white">350+</strong>
                         <span>Festivales</span>
                     </li>
                 </ul>
 
                 <div class="mision-caja">
                     <h2>Nuestra Misión</h2>
-<<<<<<< HEAD
                     <p>Crear una plataforma centralizada donde los amantes de la cultura puedan descubrir, explorar y
                         disfrutar de la rica oferta cultural de nuestra ciudad. Queremos que cada día sea una
                         oportunidad para vivir nuevas experiencias.</p>
-=======
-                    <p>Crear una plataforma centralizada donde los amantes de la cultura puedan descubrir, explorar y disfrutar de la rica oferta cultural de nuestra ciudad. Queremos que cada día sea una oportunidad para vivir nuevas experiencias.</p>
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
                 </div>
             </div>
         </section>
@@ -327,18 +283,13 @@
 
     <footer class="footer-premium">
         <img src="assets/imagenes/fondo.jpg" class="footer-bg" alt="" />
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
         <img src="assets/imagenes/happines-and-co-upper-01.png" class="deco-ampersand w-16 left-10 bottom-10" alt="" />
         <img src="assets/imagenes/happines-and-co-upper-02.png" class="deco-ampersand w-20 right-40 top-10" alt="" />
         <img src="assets/imagenes/happines-and-co-upper-04.png" class="deco-ampersand w-12 left-1/3 top-1/4" alt="" />
 
         <div class="footer-contenido">
             <div class="footer-logo">
-<<<<<<< HEAD
                 <img src="assets/imagenes/happines-and-co-propuesta-02.jpg" alt="Logo Happiness &amp; Co" width="300"
                     height="80" />
             </div>
@@ -346,13 +297,6 @@
             <div class="footer-bottom">
                 <p class="footer-copyright">© 2026 HAPPINESS&amp;Co. Todos los derechos reservados. Hecho con ❤️ en
                     Asturias</p>
-=======
-                <img src="assets/imagenes/happines-and-co-propuesta-02.jpg" alt="Logo Happiness &amp; Co" width="300" height="80" />
-            </div>
-            
-            <div class="footer-bottom">
-                <p class="footer-copyright">© 2026 HAPPINESS&amp;Co. Todos los derechos reservados. Hecho con ❤️ en Asturias</p>
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
             </div>
         </div>
     </footer>

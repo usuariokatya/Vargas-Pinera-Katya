@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -40,7 +40,7 @@
             </ul>
 
             <div class="header-tools flex items-center gap-4">
-                <form action="#" method="get" role="search" class="search-form">
+                <form action="eventos.html" method="get" role="search" class="search-form">
                     <label for="buscar" class="sr-only">Buscar</label>
                     <input type="search" id="buscar" name="buscar" placeholder="Buscar..." />
                     <button type="submit" aria-label="Buscar">🔍</button>
@@ -70,14 +70,16 @@
         <nav id="filtros" aria-label="Categorías de eventos">
             <ul>
                 <li><a href="#" data-categoria="todos">Todos</a></li>
-                <li><a href="#" data-categoria="musica">Música</a></li>
                 <li><a href="#" data-categoria="cine">Cine</a></li>
                 <li><a href="#" data-categoria="teatro">Teatro</a></li>
                 <li><a href="#" data-categoria="arte">Arte</a></li>
-                <li><a href="#" data-categoria="danza">Danza</a></li>
                 <li><a href="#" data-categoria="festivales">Festivales</a></li>
             </ul>
         </nav>
+
+        <div id="no-results" style="display: none; text-align: center; padding: 4rem; font-size: 1.25rem; color: #666;">
+            No se han encontrado eventos para tu búsqueda.
+        </div>
 
         <section id="eventos">
             <h2 id="titulo-proximos" class="titulo-multicolor text-3xl mb-12" style="text-align: center;"><span>Próximos
@@ -86,7 +88,7 @@
                 — ¡no te los pierdas!</p>
             <ul id="lista-eventos">
                 <li>
-                    <article class="evento-card card-musica">
+                    <article class="evento-card card-festivales">
                         <img src="assets/imagenes/boombastic-2023_98.webp" alt="Festival Boombastic" width="300"
                             height="200" loading="lazy" />
                         <h3>Boombastic <span class="badge-verificado badge-rosa">✓</span></h3>
@@ -96,12 +98,12 @@
                         </p>
                         <div class="bottom-info">
                             <p class="stats">👥 45k &nbsp; ❤️ 12k</p>
-                            <a href="#" class="boton-follow">Follow +</a>
+                            <a href="calendario.html?follow_evento=Boombastic#propuesta" class="boton-follow">Follow +</a>
                         </div>
                     </article>
                 </li>
                 <li>
-                    <article class="evento-card card-entretenimiento">
+                    <article class="evento-card card-teatro">
                         <img src="assets/imagenes/mammamia.webp" alt="Musical Mamma Mia" width="300" height="200"
                             loading="lazy" />
                         <h3>Mamma mia! <span class="badge-verificado badge-azul">✓</span></h3>
@@ -110,12 +112,12 @@
                         <p class="text-xs text-gris mt-2">El Musical basado en los éxitos de ABBA.</p>
                         <div class="bottom-info">
                             <p class="stats">👥 8.2k &nbsp; ❤️ 2.1k</p>
-                            <a href="#" class="boton-follow">Follow +</a>
+                            <a href="calendario.html?follow_evento=Mamma%20mia!#propuesta" class="boton-follow">Follow +</a>
                         </div>
                     </article>
                 </li>
                 <li>
-                    <article class="evento-card card-entretenimiento">
+                    <article class="evento-card card-teatro">
                         <img src="assets/imagenes/TARZAN.jpg" alt="Tarzán el Musical" width="300" height="200"
                             loading="lazy" />
                         <h3>Tarzán <span class="badge-verificado badge-azul">✓</span></h3>
@@ -124,12 +126,12 @@
                         <p class="text-xs text-gris mt-2">Adaptación del clásico literario.</p>
                         <div class="bottom-info">
                             <p class="stats">👥 5.4k &nbsp; ❤️ 1.2k</p>
-                            <a href="#" class="boton-follow">Follow +</a>
+                            <a href="calendario.html?follow_evento=Tarzán#propuesta" class="boton-follow">Follow +</a>
                         </div>
                     </article>
                 </li>
                 <li>
-                    <article class="evento-card card-musica">
+                    <article class="evento-card card-festivales">
                         <img src="assets/imagenes/metropoli.jpg" alt="Festival Metrópolis" width="300" height="200"
                             loading="lazy" />
                         <h3>Metropolis <span class="badge-verificado badge-rosa">✓</span></h3>
@@ -138,7 +140,35 @@
                         <p class="text-xs text-gris mt-2">Más de 10 días de conciertos y humor.</p>
                         <div class="bottom-info">
                             <p class="stats">👥 18k &nbsp; ❤️ 4.5k</p>
-                            <a href="#" class="boton-follow">Follow +</a>
+                            <a href="calendario.html?follow_evento=Metropolis#propuesta" class="boton-follow">Follow +</a>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="evento-card card-arte">
+                        <img src="assets/imagenes/arte.webp" alt="Arte Velásquez" width="300" height="200"
+                            loading="lazy" />
+                        <h3>Arte Velásquez <span class="badge-verificado badge-naranja">✓</span></h3>
+                        <p class="text-sm"><strong>Fecha:</strong> 10 de octubre de 2026</p>
+                        <p class="text-sm"><strong>Lugar:</strong> Gijón</p>
+                        <p class="text-xs text-gris mt-2">Arte realizado por mano de obra gijionesa.</p>
+                        <div class="bottom-info">
+                            <p class="stats">👥 920 &nbsp; ❤️ 185</p>
+                            <a href="calendario.html?follow_evento=Arte%20Velásquez#propuesta" class="boton-follow">Follow +</a>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="evento-card card-cine">
+                        <img src="assets/imagenes/cineyelmo.jpeg" alt="Cine Yelmo Ocimax" width="300" height="200"
+                            loading="lazy" />
+                        <h3>Cine Yelmo Ocimax <span class="badge-verificado badge-azul">✓</span></h3>
+                        <p class="text-sm"><strong>Fecha:</strong> 20 de noviembre de 2026</p>
+                        <p class="text-sm"><strong>Lugar:</strong> Asturias</p>
+                        <p class="text-xs text-gris mt-2">Cadena de modernos cines multisala con películas de estreno.</p>
+                        <div class="bottom-info">
+                            <p class="stats">👥 2.3k &nbsp; ❤️ 610</p>
+                            <a href="calendario.html?follow_evento=Cine%20Yelmo%20Ocimax#propuesta" class="boton-follow">Follow +</a>
                         </div>
                     </article>
                 </li>
@@ -151,7 +181,7 @@
                 momentos.</p>
             <ul id="lista-eventos">
                 <li>
-                    <article class="evento-pasado">
+                    <article class="evento-pasado card-cine">
                         <img src="assets/imagenes/ocinefresnos.jpg" alt="Ocine los Fresnos" width="300" height="200"
                             loading="lazy" />
                         <div style="padding: 1.5rem; flex-grow: 1;">
@@ -163,13 +193,25 @@
                     </article>
                 </li>
                 <li>
-                    <article class="evento-pasado">
+                    <article class="evento-pasado card-arte">
                         <img src="assets/imagenes/2022-MuseoBellasArtes.jpg" alt="Museo de Bellas Artes" width="300"
                             height="200" loading="lazy" />
                         <div style="padding: 1.5rem; flex-grow: 1;">
                             <h3 class="font-bold text-lg mb-2">Museo de Bellas Artes <span
                                     class="badge-verificado badge-naranja">✓</span></h3>
                             <p class="text-sm"><strong>Fecha:</strong> 12 de enero de 2026</p>
+                        </div>
+                        <div class="status-pasado">⛔ Evento finalizado</div>
+                    </article>
+                </li>
+                <li>
+                    <article class="evento-pasado card-teatro">
+                        <img src="assets/imagenes/teatro.jpg" alt="Teatro en Asturias" width="300" height="200"
+                            loading="lazy" />
+                        <div style="padding: 1.5rem; flex-grow: 1;">
+                            <h3 class="font-bold text-lg mb-2">Teatro Asturias <span
+                                    class="badge-verificado badge-azul">✓</span></h3>
+                            <p class="text-sm"><strong>Fecha:</strong> 24 de enero de 2026</p>
                         </div>
                         <div class="status-pasado">⛔ Evento finalizado</div>
                     </article>
@@ -203,7 +245,47 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const botonsFiltre = document.querySelectorAll('#filtros a');
-            const eventos = document.querySelectorAll('.evento-card');
+            const eventos = document.querySelectorAll('.evento-card, .evento-pasado');
+
+            function actualizarSecciones() {
+                const sections = document.querySelectorAll('main > section#eventos');
+                let anyVisible = false;
+
+                // Remove previous fillers
+                document.querySelectorAll('.relleno-ranking').forEach(el => el.remove());
+
+                sections.forEach(sec => {
+                    const ul = sec.querySelector('ul');
+                    const lis = Array.from(ul.querySelectorAll('li:not(.relleno-ranking)'));
+                    const visibleLis = lis.filter(li => li.style.display !== 'none');
+                    const hasVisible = visibleLis.length > 0;
+                    
+                    sec.style.display = hasVisible ? 'block' : 'none';
+                    if (hasVisible) anyVisible = true;
+
+                    // Fill space if there's 1 or 2 items so it doesn't look empty
+                    if (hasVisible && visibleLis.length > 0 && visibleLis.length < 3) {
+                        const relleno = document.createElement('li');
+                        relleno.className = 'relleno-ranking';
+                        relleno.innerHTML = `
+                            <article class="evento-card" style="background: linear-gradient(135deg, #ba007c 0%, #ff7b00 100%); color: white; border: none; box-shadow: 0 10px 20px rgba(255,123,0,0.2);">
+                                <div style="padding: 2.5rem 1.5rem; text-align: center; display: flex; flex-direction: column; justify-content: center; height: 100%;">
+                                    <div style="font-size: 3rem; margin-bottom: 0.5rem;">🔥</div>
+                                    <h3 style="color: white; font-size: 1.5rem; margin-bottom: 1rem;">Ranking #1</h3>
+                                    <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; margin-bottom: 1.5rem;">El <strong>Boombastic</strong> es el evento mejor valorado con más de <strong style="color: white;">12k ❤️</strong></p>
+                                    <a href="calendario.html?follow_evento=Boombastic#propuesta" style="background: white; color: #ba007c; font-weight: bold; padding: 0.75rem 1.5rem; border-radius: 9999px; display: inline-block; transition: transform 0.2s;">Síguelo aquí</a>
+                                </div>
+                            </article>
+                        `;
+                        ul.appendChild(relleno);
+                    }
+                });
+                
+                const noResults = document.getElementById('no-results');
+                if (noResults) {
+                    noResults.style.display = anyVisible ? 'none' : 'block';
+                }
+            }
 
             function filtrar(categoria) {
                 eventos.forEach(ev => {
@@ -213,19 +295,38 @@
                         ev.closest('li').style.display = 'none';
                     }
                 });
+                actualizarSecciones();
             }
 
             botonsFiltre.forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
+                    // Limpiar el buscardor si se clica un filtro
+                    document.getElementById('buscar').value = '';
                     const cat = btn.getAttribute('data-categoria');
                     filtrar(cat);
                 });
             });
 
+            function buscar(termino) {
+                const query = termino.toLowerCase().trim();
+                eventos.forEach(ev => {
+                    const texto = ev.textContent.toLowerCase();
+                    if (texto.includes(query)) {
+                        ev.closest('li').style.display = 'block';
+                    } else {
+                        ev.closest('li').style.display = 'none';
+                    }
+                });
+                actualizarSecciones();
+            }
+
             const urlParams = new URLSearchParams(window.location.search);
             const catUrl = urlParams.get('cat');
             if (catUrl) filtrar(catUrl);
+
+            const buscarUrl = urlParams.get('buscar');
+            if (buscarUrl) buscar(buscarUrl);
         });
     </script>
 </body>

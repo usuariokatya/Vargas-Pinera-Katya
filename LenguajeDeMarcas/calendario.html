@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -29,7 +29,8 @@
     <header>
         <nav>
             <a href="index.html">
-                <img src="assets/imagenes/happines-and-co-propuesta-02.jpg" alt="Logo Happiness &amp; Co" width="180" height="60" />
+                <img src="assets/imagenes/happines-and-co-propuesta-02.jpg" alt="Logo Happiness &amp; Co" width="180"
+                    height="60" />
             </a>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -39,7 +40,7 @@
             </ul>
 
             <div class="header-tools flex items-center gap-4">
-                <form action="#" method="get" role="search" class="search-form">
+                <form action="eventos.html" method="get" role="search" class="search-form">
                     <label for="buscar" class="sr-only">Buscar</label>
                     <input type="search" id="buscar" name="buscar" placeholder="Buscar..." />
                     <button type="submit" aria-label="Buscar">🔍</button>
@@ -53,9 +54,11 @@
         <!-- HERO CALENDARIO -->
         <section id="inicio" class="hero-sub">
             <img src="assets/imagenes/fondo.jpg" alt="Cudillero" width="1440" height="810" loading="eager" />
-            
-            <img src="assets/imagenes/happines-and-co-upper-02.png" class="deco-ampersand w-24 right-10 top-20 opacity-40" alt="" />
-            <img src="assets/imagenes/happines-and-co-upper-04.png" class="deco-ampersand w-16 left-1/4 bottom-1/2 opacity-20" alt="" />
+
+            <img src="assets/imagenes/happines-and-co-upper-02.png"
+                class="deco-ampersand w-24 right-10 top-20 opacity-40" alt="" />
+            <img src="assets/imagenes/happines-and-co-upper-04.png"
+                class="deco-ampersand w-16 left-1/4 bottom-1/2 opacity-20" alt="" />
 
             <div class="hero-content">
                 <h1 class="titulo-multicolor"><span class="texto-blanco">Calendario</span> <span>cultural</span></h1>
@@ -106,6 +109,13 @@
                             <span>Arte (Finalizado)</span>
                         </div>
                     </li>
+                    <li class="event-item past" style="border-left-color: var(--color-azul);">
+                        <span class="event-date">24 ENE</span>
+                        <div class="event-info">
+                            <strong>Teatro Asturias</strong>
+                            <span>Teatro (Finalizado)</span>
+                        </div>
+                    </li>
                     <li class="event-item" style="border-left-color: var(--color-rosa);">
                         <span class="event-date">05 JUN</span>
                         <div class="event-info">
@@ -138,71 +148,85 @@
             </section>
         </section>
 
-        <section id="propuesta" aria-labelledby="titulo-propuesta" style="padding: 4rem 2rem; background: #fafafa; text-align: center;">
-            <h2 id="titulo-propuesta" class="titulo-multicolor"><span>Propón </span><span>un </span><span>evento</span></h2>
-            <p style="font-size: 1.1rem; color: var(--color-gris); margin-bottom: 2rem; opacity: 0.8;">¿Conoces un evento cultural en Asturias que debería estar aquí? ¡Cuéntanoslo!</p>
+        <section id="propuesta" aria-labelledby="titulo-propuesta"
+            style="padding: 4rem 2rem; background: #fafafa; text-align: center;">
+            <h2 id="titulo-propuesta" class="titulo-multicolor"><span>Propón </span><span>un </span><span>evento</span>
+            </h2>
+            <p id="desc-propuesta" style="font-size: 1.1rem; color: var(--color-gris); margin-bottom: 2rem; opacity: 0.8;">¿Conoces un
+                evento cultural en Asturias que debería estar aquí? ¡Cuéntanoslo!</p>
 
             <form id="form-propuesta" action="#" method="post">
                 <div>
-                    <label for="nombre-evento">🎭 Nombre del evento</label>
-                    <input type="text" id="nombre-evento" name="nombre-evento" placeholder="Ej: Festival de Jazz de Gijón" required />
+                    <label for="nombre-evento" id="label-nombre-evento">🎭 Nombre del evento</label>
+                    <input type="text" id="nombre-evento" name="nombre-evento"
+                        placeholder="Ej: Festival de Jazz de Gijón" required />
                 </div>
-                <div>
-                    <label for="categoria-evento">🏷️ Categoría</label>
-                    <select id="categoria-evento" name="categoria-evento" required>
-                        <option value="">-- Selecciona una categoría --</option>
-                        <option value="musica">🎵 Música</option>
-                        <option value="cine">🎬 Cine</option>
-                        <option value="teatro">🎭 Teatro / Musical</option>
-                        <option value="arte">🎨 Arte</option>
-                        <option value="danza">💃 Danza</option>
-                        <option value="festivales">🎉 Festival</option>
-                        <option value="otro">✨ Otro</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="fecha-evento">📅 Fecha del evento</label>
-                    <input type="date" id="fecha-evento" name="fecha-evento" required />
-                </div>
-                <div>
-                    <label for="lugar-evento">📍 Lugar</label>
-                    <input type="text" id="lugar-evento" name="lugar-evento" placeholder="Ej: Teatro Campoamor, Oviedo" required />
-                </div>
-                <div>
-                    <label for="descripcion-evento">📝 Descripción</label>
-                    <textarea id="descripcion-evento" name="descripcion-evento" rows="4" placeholder="Describe brevemente el evento..." required></textarea>
+                <div id="campos-extra">
+                    <div>
+                        <label for="categoria-evento">🏷️ Categoría</label>
+                        <select id="categoria-evento" name="categoria-evento" required>
+                            <option value="">-- Selecciona una categoría --</option>
+                            <option value="musica">🎵 Música</option>
+                            <option value="cine">🎬 Cine</option>
+                            <option value="teatro">🎭 Teatro / Musical</option>
+                            <option value="arte">🎨 Arte</option>
+                            <option value="danza">💃 Danza</option>
+                            <option value="festivales">🎉 Festival</option>
+                            <option value="otro">✨ Otro</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="fecha-evento">📅 Fecha del evento</label>
+                        <input type="date" id="fecha-evento" name="fecha-evento" required />
+                    </div>
+                    <div>
+                        <label for="lugar-evento">📍 Lugar</label>
+                        <input type="text" id="lugar-evento" name="lugar-evento" placeholder="Ej: Teatro Campoamor, Oviedo"
+                            required />
+                    </div>
+                    <div>
+                        <label for="descripcion-evento">📝 Descripción</label>
+                        <textarea id="descripcion-evento" name="descripcion-evento" rows="4"
+                            placeholder="Describe brevemente el evento..." required></textarea>
+                    </div>
                 </div>
                 <div>
                     <label for="contacto-propuesta">✉️ Tu correo electrónico</label>
-                    <input type="email" id="contacto-propuesta" name="contacto-propuesta" placeholder="tucorreo@ejemplo.com" required autocomplete="email" />
+                    <input type="email" id="contacto-propuesta" name="contacto-propuesta"
+                        placeholder="tucorreo@ejemplo.com" required autocomplete="email" />
                 </div>
-                <button type="submit">Enviar propuesta 🚀</button>
+                <button type="submit" id="btn-submit-form">Enviar propuesta 🚀</button>
             </form>
+            <p id="mensaje-exito" style="display: none; color: var(--color-rosa); font-weight: bold; margin-top: 2rem;">
+                ¡Listo! Te avisaremos un día antes del evento.
+            </p>
         </section>
 
     </main>
 
     <footer class="footer-premium">
         <img src="assets/imagenes/fondo.jpg" class="footer-bg" alt="" />
-        
+
         <img src="assets/imagenes/happines-and-co-upper-01.png" class="deco-ampersand w-16 left-10 bottom-10" alt="" />
         <img src="assets/imagenes/happines-and-co-upper-02.png" class="deco-ampersand w-20 right-40 top-10" alt="" />
         <img src="assets/imagenes/happines-and-co-upper-04.png" class="deco-ampersand w-12 left-1/3 top-1/4" alt="" />
 
         <div class="footer-contenido">
             <div class="footer-logo">
-                <img src="assets/imagenes/happines-and-co-propuesta-02.jpg" alt="Logo Happiness &amp; Co" width="300" height="80" />
+                <img src="assets/imagenes/happines-and-co-propuesta-02.jpg" alt="Logo Happiness &amp; Co" width="300"
+                    height="80" />
             </div>
-            
+
             <div class="footer-bottom">
-                <p class="footer-copyright">© 2026 HAPPINESS&amp;Co. Todos los derechos reservados. Hecho con ❤️ en Asturias</p>
+                <p class="footer-copyright">© 2026 HAPPINESS&amp;Co. Todos los derechos reservados. Hecho con ❤️ en
+                    Asturias</p>
             </div>
         </div>
     </footer>
 
     <script>
         // Configuración inicial: Abril 2026 (mes 3 porque Enero es 0)
-        let fechaActual = new Date(2026, 3, 1); 
+        let fechaActual = new Date(2026, 3, 1);
         const nombresMeses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
         const tituloMes = document.getElementById('mes-actual');
         const cuerpoCalendario = document.getElementById('cuerpo-calendario');
@@ -212,6 +236,7 @@
         const eventos = {
             "2026-0-1": { nombre: "Ocine Los Fresnos", cat: "cine" },
             "2026-0-12": { nombre: "Museo Bellas Artes", cat: "arte" },
+            "2026-0-24": { nombre: "Teatro Asturias", cat: "teatro" },
             "2026-5-5": { nombre: "Festival Boombastic", cat: "musica" },
             "2026-5-15": { nombre: "Mamma Mia!", cat: "teatro" },
             "2026-5-25": { nombre: "Tarzán Musical", cat: "teatro" },
@@ -241,7 +266,7 @@
 
                 const cell = document.createElement('td');
                 cell.innerHTML = `<span>${dia}</span>`;
-                
+
                 const fechaKey = `${anio}-${mes}-${dia}`;
                 if (eventos[fechaKey]) {
                     const ev = eventos[fechaKey];
@@ -269,6 +294,43 @@
         });
 
         renderizarCalendario();
+
+        // Controlar el modo del formulario basado en URL (seguir evento o proponer)
+        const urlParams = new URLSearchParams(window.location.search);
+        const followEvento = urlParams.get('follow_evento');
+
+        if (followEvento) {
+            // Cambiar textos y títulos
+            document.getElementById('titulo-propuesta').innerHTML = '<span>Sigue </span><span>este </span><span>evento</span>';
+            document.getElementById('desc-propuesta').textContent = 'Déjanos tus datos y te enviaremos un aviso un día antes de que empiece el evento.';
+            
+            const inputNombre = document.getElementById('nombre-evento');
+            inputNombre.value = decodeURIComponent(followEvento);
+            inputNombre.setAttribute('readonly', true);
+            inputNombre.style.backgroundColor = '#eaeaea';
+            inputNombre.style.cursor = 'not-allowed';
+            document.getElementById('label-nombre-evento').textContent = '🎭 Evento a seguir';
+            
+            // Ocultar campos innecesarios
+            const camposExtra = document.getElementById('campos-extra');
+            camposExtra.style.display = 'none';
+            // Quitar el required para que deje enviar
+            camposExtra.querySelectorAll('input, select, textarea').forEach(el => el.removeAttribute('required'));
+
+            document.getElementById('btn-submit-form').textContent = 'Avisarme un día antes 🔔';
+        }
+
+        document.getElementById('form-propuesta').addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.getElementById('form-propuesta').style.display = 'none';
+            const msgExito = document.getElementById('mensaje-exito');
+            if (followEvento) {
+                msgExito.textContent = '¡Listo! Te avisaremos un día antes de que empiece ' + decodeURIComponent(followEvento) + '.';
+            } else {
+                msgExito.textContent = '¡Propuesta enviada con éxito! La revisaremos pronto.';
+            }
+            msgExito.style.display = 'block';
+        });
     </script>
 </body>
 
