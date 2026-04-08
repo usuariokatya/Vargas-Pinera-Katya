@@ -48,10 +48,6 @@ Cosas que no sabía antes y he ido aprendiendo mientras hacía el proyecto:
 
 - **RSS 2.0 en vez de 1.0** — La versión 1.0 que usamos normalmente en clase está basada en RDF, que es más compleja. La 2.0 es más sencilla y directa: solo necesitas `<channel>` e `<item>` para publicar eventos con título, descripción y fecha. Por eso la usé para este proyecto.
 
-## Lo que he aprendido por mi cuenta
-
-Estas cosas no las hemos visto todavía en clase, las fui aprendiendo yo sola mientras hacía el proyecto:
-
 - **JavaScript para el calendario** — generé las filas y celdas del calendario dinámicamente con `new Date()` y `.getMonth()`. El calendario se actualiza solo al pulsar Anterior / Siguiente sin recargar la página. Dato: en JavaScript enero es el mes 0, no el 1.
 
 - **JavaScript para los filtros** — usé `data-categoria` en los botones y `addEventListener` para mostrar u ocultar los eventos según la categoría elegida.
@@ -62,6 +58,14 @@ Estas cosas no las hemos visto todavía en clase, las fui aprendiendo yo sola mi
 
 - **`<video>` con `autoplay`, `muted` y `loop`** — tuve que buscar por mi cuenta que si no pones `muted` junto con `autoplay`, los navegadores bloquean el vídeo y no se reproduce solo. Con `loop` se repite en bucle.
 
+- **`@keyframes` en CSS** — lo usé para animar los lazos del logo que flotan en el hero. La animación sube y baja el elemento suavemente de forma infinita usando `translateY` y `rotate`. Sin esto los lazos estarían quietos.
+
+- **Gradiente en texto** — para los títulos grandes usé `linear-gradient` como fondo del texto y `background-clip: text` con el color del texto en transparente, así se ven los colores del proyecto (rosa, azul y naranja) a través de las letras.
+
+- **`aspect-ratio: 16/9`** — para que los vídeos embebidos de YouTube mantengan siempre las proporciones correctas en cualquier tamaño de pantalla sin deformarse ni dejar espacios en blanco.
+
+- **Bordes con gradiente en las cards** — usé un truco con dos capas de CSS (`padding-box` y `border-box`) para que las tarjetas tengan un borde de colores mezclando naranja, rosa y azul, sin que eso afecte al fondo blanco de dentro.
+
 ## Lo que he usado
 
-Para hacer el proyecto estoy trabajando con VS Code para el código, Figma para los bocetos, Oracle SQL Developer y TOAD para la base de datos, y Git para guardar los cambios con commits. Para la web uso HTML5, CSS propio, Tailwind CSS y JavaScript.
+Para hacer el proyecto estoy trabajando con VS Code para el código, Figma para los bocetos, Oracle SQL Developer y TOAD para la base de datos, y Git para guardar los cambios con commits. Para la web uso HTML, CSS propio, Tailwind CSS y JavaScript.
