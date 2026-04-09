@@ -1,27 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>HAPPINESSCo - Próximos Eventos</title>
+    <title>HAPPINESS&amp;Co - Próximos Eventos</title>
     <link>http://www.happinessco.com</link>
-    <description>Agenda cultural con los próximos eventos de HAPPINESSCo</description>
+    <description>Agenda cultural con los próximos eventos de HAPPINESS&amp;Co</description>
     <language>es-es</language>
 
     <item>
-      <title>Festival Rock</title>
-      <description>Bandas locales en el Auditorio.</description>
-      <pubDate>Fri, 05 Jun 2026 18:00:00 GMT</pubDate>
+      <title>Festival Boombastic</title>
+      <link>http://www.happinessco.com/eventos/boombastic</link>
+      <description>Macrofestival líder de música urbana, pop y electrónica en La Morgal, Llanera.</description>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
     </item>
 
     <item>
-      <title>Teatro Clasico</title>
-      <description>Obra de calle en Plaza Mayor.</description>
-      <pubDate>Mon, 15 Jun 2026 21:00:00 GMT</pubDate>
+      <title>Mamma Mia!</title>
+      <link>http://www.happinessco.com/eventos/mamma-mia</link>
+      <description>El Musical basado en los éxitos de ABBA en el Teatro Campoamor.</description>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
     </item>
 
     <item>
-      <title>Feria del Libro</title>
-      <description>Encuentro de autores en el Parque Central.</description>
-      <pubDate>Thu, 25 Jun 2026 10:00:00 GMT</pubDate>
+      <title>Tarzán Musical</title>
+      <link>http://www.happinessco.com/eventos/tarzan</link>
+      <description>Adaptación del clásico literario en Avilés.</description>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>Festival Metropolis</title>
+      <link>http://www.happinessco.com/eventos/metropolis</link>
+      <description>Más de 10 días de conciertos, humor y mucho más en Gijón.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
     </item>
 
   </channel>
