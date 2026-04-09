@@ -1,71 +1,56 @@
 # Mi Proyecto: HAPPINESS&Co
 
-Este es el repositorio donde estaré subiendo todo el proyecto de la agenda cultural HAPPINESS&Co, una web para descubrir eventos culturales de Asturias: música, teatro, cine, arte, festivales y mucho más.
+Este es el repositorio donde estaré subiendo todo el proyecto de la agenda 
+cultural HAPPINESS&Co, una web para descubrir eventos culturales de Asturias: 
+música, teatro, cine, arte, festivales y mucho más.
 
-He organizado el proyecto en las carpetas que nos pedían:
+Eh organizado el proyecto en las carpetas que nos pedían:
 
-- **Lenguaje de marcas:** Las páginas de la web están bastante avanzadas y por ahora se ven como quiero, aunque seguramente cambie cosas más adelante:
+- **Lenguaje de marcas:**
   - `index.html` — Página principal con los eventos, un vídeo de Asturias y estadísticas.
-  - `eventos.html` — Todos los eventos separados en próximos y finalizados, con filtros por categoría funcionando.
+  - `eventos.html` — Todos los eventos separados en próximos y finalizados, con filtros por categoria funcionando.
   - `calendario.html` — Calendario que se genera solo con JavaScript, puedes moverte entre meses y proponer eventos desde un formulario.
-  - `asturias.html` — Galería de fotos de eventos con vídeo y texto sobre Asturias.
-  - `reset.css` — Elimina los estilos que los navegadores aplican por defecto para que la web se vea igual en todos.
+  - `asturias.html` — Galeria de fotos de eventos con vídeo y texto sobre Asturias.
+  - `reset.css` — Elimina los estilos por defecto del navegador.
   - `global.css` — Estilos base de toda la web (colores, fuentes, reset).
-  - `style.css` — Estilos más específicos, todavía en progreso.
+  - `style.css` — Imports.
+  - `assets/imagenes/` — Logos e iconos.
+  - `assets/galeria/` — Fotos de los eventos.
 
-- **Base de datos:** Tablas creadas en Oracle SQL Developer (Eventos, Usuarios, Galerías, Imágenes y Favoritos) con datos de prueba, IDs automáticos, constraints y vistas. El diagrama E-R está hecho en Dia y TOAD.
+- **Base de datos:** Tablas en Oracle SQL Developer (Eventos, Usuarios, Galerias, Imagenes y Favoritos) con datos de prueba, IDs automaticos, constraints y vistas. El diagrama E-R está hecho en Dia y TOAD.
 
-- **Programación:** He añadido JavaScript para el calendario dinámico y los filtros de categoría. La parte de Java está pendiente.
+- **Programación:** JavaScript para el calendario dinámico y los filtros de categoria. La parte de Java está pendiente.
 
-- **RSS:** Archivo XML con los 3 próximos eventos en formato RSS 2.0 (Festival de Verano, Cine bajo las estrellas y Expo Arte Moderno).
+- **RSS:** Archivo XML con los 3 próximos eventos en formato RSS 2.0, ya conectado al index.html.
 
 ## Sobre el diseño
 
-Primero hice el boceto en blanco y negro para planear la estructura, luego lo pasé a color siguiendo la paleta del PDF. Ahora está todo en código.
+Primero hice el boceto en blanco y negro para planear la estructura, luego lo  pasé a color siguiendo la paleta del PDF. Después diseñe el resto de secciones en Figma.
 
-He seguido los colores del PDF:
+Eh seguido los colores del PDF:
 
 - Rosa `#ba007c` para música y logo.
 - Azul `#009bdb` para cine y teatro.
 - Naranja `#ff7b00` para exposiciones.
 - Gris `#555555` para textos.
 
-Los estilos están en `reset.css`, `global.css` y `style.css` junto con Tailwind CSS. La web luce como quiero visualmente, aunque es probable que haga cambios mientras voy revisando cosas.
-
 ## Lo que he aprendido
 
-Cosas que no sabía antes y he ido aprendiendo mientras hacía el proyecto:
-
-- **`CREATE VIEW` en Oracle SQL** — Una vista es como guardar una consulta con nombre. En vez de escribir el mismo SELECT largo cada vez, lo guardas como vista y lo usas como si fuera una tabla normal.
-
-- **`SEQUENCE`** — En Oracle no existe AUTO_INCREMENT. Hay que crear una secuencia aparte para que los IDs se generen solos al insertar datos.
-
-- **`ON DELETE CASCADE`** — Si borras un evento, esto hace que se borren automáticamente sus galerías e imágenes asociadas.
-
-- **CSS Grid (`display: grid`)** — Organiza elementos en filas y columnas a la vez, como una cuadrícula. Lo uso en la galería de fotos para que las imágenes se coloquen solas en varias columnas.
-
-- **`tailwind.config`** — La configuración de Tailwind para añadir mis propios colores y usarlos como clases directamente en el HTML.
-
-- **RSS 2.0 en vez de 1.0** — La versión 1.0 que usamos normalmente en clase está basada en RDF, que es más compleja. La 2.0 es más sencilla y directa: solo necesitas `<channel>` e `<item>` para publicar eventos con título, descripción y fecha. Por eso la usé para este proyecto.
-
-- **JavaScript para el calendario** — generé las filas y celdas del calendario dinámicamente con `new Date()` y `.getMonth()`. El calendario se actualiza solo al pulsar Anterior / Siguiente sin recargar la página. Dato: en JavaScript enero es el mes 0, no el 1.
-
-- **JavaScript para los filtros** — usé `data-categoria` en los botones y `addEventListener` para mostrar u ocultar los eventos según la categoría elegida.
-
-- **`URLSearchParams` y `window.location.search`** — lo uso en `eventos.html` para leer el parámetro `?cat=` de la URL. Así cuando pulsas una categoría desde `index.html`, llegas a `eventos.html` con el filtro ya aplicado automáticamente.
-
-- **`window.location.href`** — lo uso para redirigir al usuario a `eventos.html` con la categoría ya seleccionada al pulsar una card desde la página principal.
-
-- **`<video>` con `autoplay`, `muted` y `loop`** — tuve que buscar por mi cuenta que si no pones `muted` junto con `autoplay`, los navegadores bloquean el vídeo y no se reproduce solo. Con `loop` se repite en bucle.
-
-- **`@keyframes` en CSS** — lo usé para animar los lazos del logo que flotan en el hero. La animación sube y baja el elemento suavemente de forma infinita usando `translateY` y `rotate`. Sin esto los lazos estarían quietos.
-
-- **Gradiente en texto** — para los títulos grandes usé `linear-gradient` como fondo del texto y `background-clip: text` con el color del texto en transparente, así se ven los colores del proyecto (rosa, azul y naranja) a través de las letras.
-
-- **`aspect-ratio: 16/9`** — para que los vídeos embebidos de YouTube mantengan siempre las proporciones correctas en cualquier tamaño de pantalla sin deformarse ni dejar espacios en blanco.
-
-- **Bordes con gradiente en las cards** — usé un truco con dos capas de CSS (`padding-box` y `border-box`) para que las tarjetas tengan un borde de colores mezclando naranja, rosa y azul, sin que eso afecte al fondo blanco de dentro.
+- **`CREATE VIEW` en Oracle SQL** — como guardar una consulta con nombre y usarla como si fuera una tabla normal.
+- **`SEQUENCE`** — en Oracle no existe AUTO_INCREMENT, hay que crear una secuencia aparte para los IDs.
+- **`ON DELETE CASCADE`** — si borras un evento se borran automaticamente sus galerias e imagenes.
+- **CSS Grid (`display: grid`)** — para que las imagenes de la galeria se coloquen solas en varias columnas.
+- **`tailwind.config`** — para añadir mis propios colores y usarlos como clases en el HTML.
+- **RSS 2.0** — más sencilla que la 1.0, solo necesitas `<channel>` e `<item>` para publicar eventos.
+- **JavaScript para el calendario** — con `new Date()` y `.getMonth()`. Dato: enero es 0 en JavaScript (no el 1).
+- **JavaScript para los filtros** — `data-categoria` en los botones y `addEventListener` para mostrar u ocultar eventos.
+- **`URLSearchParams`** — para leer `?cat=` de la URL y llegar a `eventos.html` con el filtro ya aplicado.
+- **`<video>` con `autoplay`, `muted` y `loop`** — sin `muted` los navegadores bloquean el autoplay.
+- **`@keyframes`** — para animar los lazos del logo con `translateY` y `rotate`.
+- **Gradiente en texto** — `linear-gradient` + `background-clip: text` para que se vean los colores a traves de las letras.
+- **`aspect-ratio: 16/9`** — para que los vídeos de YouTube no se deformen en ningun tamaño.
+- **Bordes con gradiente en las cards** — con `padding-box` y `border-box` para mezclar colores sin afectar el fondo.
 
 ## Lo que he usado
 
-Para hacer el proyecto estoy trabajando con VS Code para el código, Figma para los bocetos, Oracle SQL Developer y TOAD para la base de datos, y Git para guardar los cambios con commits. Para la web uso HTML, CSS propio, Tailwind CSS y JavaScript.
+VS Code, Figma, Oracle SQL Developer, TOAD, Git y GitHub. HTML, CSS, Tailwind CSS y JavaScript.
