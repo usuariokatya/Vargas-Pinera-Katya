@@ -53,7 +53,7 @@
 
         <!-- HERO CALENDARIO -->
         <section id="inicio" class="hero-sub">
-            <img src="assets/imagenes/fondo.jpg" alt="Cudillero" width="1440" height="810" loading="eager" />
+            <img src="assets/galeria/fondo.jpg" alt="Cudillero" width="1440" height="810" loading="eager" />
 
             <img src="assets/imagenes/happines-and-co-upper-02.png"
                 class="deco-ampersand w-24 right-10 top-20 opacity-40" alt="" />
@@ -152,7 +152,8 @@
             style="padding: 4rem 2rem; background: #fafafa; text-align: center;">
             <h2 id="titulo-propuesta" class="titulo-multicolor"><span>Propón </span><span>un </span><span>evento</span>
             </h2>
-            <p id="desc-propuesta" style="font-size: 1.1rem; color: var(--color-gris); margin-bottom: 2rem; opacity: 0.8;">¿Conoces un
+            <p id="desc-propuesta"
+                style="font-size: 1.1rem; color: var(--color-gris); margin-bottom: 2rem; opacity: 0.8;">¿Conoces un
                 evento cultural en Asturias que debería estar aquí? ¡Cuéntanoslo!</p>
 
             <form id="form-propuesta" action="#" method="post">
@@ -181,8 +182,8 @@
                     </div>
                     <div>
                         <label for="lugar-evento">📍 Lugar</label>
-                        <input type="text" id="lugar-evento" name="lugar-evento" placeholder="Ej: Teatro Campoamor, Oviedo"
-                            required />
+                        <input type="text" id="lugar-evento" name="lugar-evento"
+                            placeholder="Ej: Teatro Campoamor, Oviedo" required />
                     </div>
                     <div>
                         <label for="descripcion-evento">📝 Descripción</label>
@@ -205,7 +206,7 @@
     </main>
 
     <footer class="footer-premium">
-        <img src="assets/imagenes/fondo.jpg" class="footer-bg" alt="" />
+        <img src="assets/galeria/fondo.jpg" class="footer-bg" alt="" />
 
         <img src="assets/imagenes/happines-and-co-upper-01.png" class="deco-ampersand w-16 left-10 bottom-10" alt="" />
         <img src="assets/imagenes/happines-and-co-upper-02.png" class="deco-ampersand w-20 right-40 top-10" alt="" />
@@ -303,14 +304,14 @@
             // Cambiar textos y títulos
             document.getElementById('titulo-propuesta').innerHTML = '<span>Sigue </span><span>este </span><span>evento</span>';
             document.getElementById('desc-propuesta').textContent = 'Déjanos tus datos y te enviaremos un aviso un día antes de que empiece el evento.';
-            
+
             const inputNombre = document.getElementById('nombre-evento');
             inputNombre.value = decodeURIComponent(followEvento);
             inputNombre.setAttribute('readonly', true);
             inputNombre.style.backgroundColor = '#eaeaea';
             inputNombre.style.cursor = 'not-allowed';
             document.getElementById('label-nombre-evento').textContent = '🎭 Evento a seguir';
-            
+
             // Ocultar campos innecesarios
             const camposExtra = document.getElementById('campos-extra');
             camposExtra.style.display = 'none';
