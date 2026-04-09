@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-=======
-/* ================================
-   STYLE.CSS — Estilos personalizados
-   Happiness & Co
-   (complementa Tailwind)
-================================ */
-
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 /* ---- HEADER ---- */
 header {
     position: sticky;
@@ -187,11 +178,7 @@ header nav form button {
     pointer-events: none;
     z-index: 5;
     opacity: 0.8;
-<<<<<<< HEAD
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
-=======
-    filter: drop-shadow(0 0 10px rgba(0,0,0,0.3));
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
     transition: transform 0.5s ease;
 }
 
@@ -296,20 +283,12 @@ header nav form button {
     padding: 0.6rem 1.5rem;
     border-radius: 0.75rem;
     background: white;
-<<<<<<< HEAD
     border: 1px solid rgba(0, 0, 0, 0.05);
-=======
-    border: 1px solid rgba(0,0,0,0.05);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
     font-weight: 700;
     font-size: 0.9rem;
     color: #333;
     cursor: pointer;
-<<<<<<< HEAD
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-=======
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -317,11 +296,7 @@ header nav form button {
 #filtros li button:hover {
     transform: translateY(-3px);
     color: white;
-<<<<<<< HEAD
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-=======
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 }
 
 #filtros li a[data-categoria="musica"]:hover,
@@ -351,12 +326,8 @@ header nav form button {
     background-color: var(--color-blanco);
 }
 
-<<<<<<< HEAD
 #eventos h2,
 .titulo-multicolor {
-=======
-#eventos h2, .titulo-multicolor {
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
     font-size: 3.5rem;
     font-weight: 900;
     text-transform: uppercase;
@@ -384,6 +355,7 @@ header nav form button {
 #lista-eventos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    justify-content: center;
     gap: 2.5rem;
     max-width: 1400px;
     margin: 0 auto;
@@ -396,7 +368,6 @@ header nav form button {
 }
 
 .evento-card {
-<<<<<<< HEAD
     background: linear-gradient(white, white) padding-box,
         linear-gradient(135deg, var(--color-naranja), var(--color-rosa), var(--color-azul)) border-box;
     border: 3px solid transparent;
@@ -405,47 +376,26 @@ header nav form button {
     padding: 1.25rem;
     /* Margen interno solicitado */
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-=======
-    background: linear-gradient(white, white) padding-box, 
-                linear-gradient(135deg, var(--color-naranja), var(--color-rosa), var(--color-azul)) border-box;
-    border: 3px solid transparent;
-    border-radius: 3rem;
-    overflow: hidden;
-    padding: 1.25rem; /* Margen interno solicitado */
-    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
     transition: all 0.4s ease;
     display: flex;
     flex-direction: column;
     width: 100%;
-<<<<<<< HEAD
     min-height: 580px;
     /* Formato esbelto vertical */
-=======
-    min-height: 580px; /* Formato esbelto vertical */
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
     text-align: left;
 }
 
 .evento-card:hover {
     transform: translateY(-8px);
-<<<<<<< HEAD
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
-=======
-    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 }
 
 .evento-card img {
     width: 100%;
     height: 220px;
     object-fit: cover;
-<<<<<<< HEAD
     border-radius: 2rem;
     /* Imagen interna redondeada */
-=======
-    border-radius: 2rem; /* Imagen interna redondeada */
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
     margin-bottom: 1.5rem;
 }
 
@@ -508,11 +458,7 @@ header nav form button {
     opacity: 0.7;
     filter: grayscale(1);
     transition: all 0.5s ease;
-<<<<<<< HEAD
     border: 1px solid rgba(0, 0, 0, 0.1);
-=======
-    border: 1px solid rgba(0,0,0,0.1);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -522,11 +468,7 @@ header nav form button {
     opacity: 1;
     filter: grayscale(0);
     transform: scale(1.02);
-<<<<<<< HEAD
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-=======
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 }
 
 .evento-pasado img {
@@ -559,11 +501,7 @@ header nav form button {
     background: #ffffff !important;
     padding: 3rem 2rem;
     border-radius: 3rem;
-<<<<<<< HEAD
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.06);
-=======
-    box-shadow: 0 40px 100px rgba(0,0,0,0.06);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
     text-align: center;
     flex: 1;
     min-width: 220px;
@@ -574,11 +512,7 @@ header nav form button {
 
 .happ-stat-box:hover {
     transform: translateY(-15px) scale(1.05);
-<<<<<<< HEAD
     box-shadow: 0 60px 120px rgba(186, 0, 124, 0.1);
-=======
-    box-shadow: 0 60px 120px rgba(186,0,124,0.1);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 }
 
 .happ-stat-box strong {
@@ -612,13 +546,8 @@ header nav form button {
     aspect-ratio: 16/9;
     border-radius: 2rem;
     overflow: hidden;
-<<<<<<< HEAD
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.1);
-=======
-    box-shadow: 0 40px 100px rgba(0,0,0,0.4);
-    border: 1px solid rgba(255,255,255,0.1);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 }
 
 .video-wrapper iframe {
@@ -640,23 +569,7 @@ footer small {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* ---- RESPONSIVE ---- */
-@media (max-width: 1024px) {
-    #lista-eventos {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-@media (max-width: 640px) {
-    #lista-eventos {
-        grid-template-columns: 1fr;
-    }
-
-    header nav {
-        flex-direction: column;
-        gap: 1rem;
-    }
-}
 
 /* ---- CALENDARIO ---- */
 .calendario-wrapper {
@@ -665,11 +578,7 @@ footer small {
     background: white;
     padding: 2.5rem;
     border-radius: 3rem;
-<<<<<<< HEAD
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.06);
-=======
-    box-shadow: 0 40px 100px rgba(0,0,0,0.06);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 }
 
 .nav-mes {
@@ -736,11 +645,7 @@ footer small {
 }
 
 .calendario-wrapper td.has-event {
-<<<<<<< HEAD
     border-color: rgba(0, 0, 0, 0.1);
-=======
-    border-color: rgba(0,0,0,0.1);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
     background: white;
 }
 
@@ -757,7 +662,6 @@ footer small {
     text-transform: uppercase;
 }
 
-<<<<<<< HEAD
 .event-musica .event-tag {
     background: var(--color-rosa);
 }
@@ -770,11 +674,6 @@ footer small {
 .event-arte .event-tag {
     background: var(--color-naranja);
 }
-=======
-.event-musica .event-tag { background: var(--color-rosa); }
-.event-cine .event-tag, .event-teatro .event-tag { background: var(--color-azul); }
-.event-arte .event-tag { background: var(--color-naranja); }
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 
 .lista-proximos {
     list-style: none;
@@ -794,21 +693,13 @@ footer small {
     align-items: center;
     gap: 1.2rem;
     transition: all 0.3s ease;
-<<<<<<< HEAD
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
-=======
-    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 }
 
 .event-item:hover {
     transform: translateX(5px);
     background: white;
-<<<<<<< HEAD
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-=======
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 }
 
 .event-item.past {
@@ -825,11 +716,7 @@ footer small {
     border-radius: 0.75rem;
     min-width: 60px;
     text-align: center;
-<<<<<<< HEAD
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-=======
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 }
 
 .event-info {
@@ -856,11 +743,7 @@ footer small {
     background: white;
     padding: 3rem;
     border-radius: 3.5rem;
-<<<<<<< HEAD
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.06);
-=======
-    box-shadow: 0 40px 100px rgba(0,0,0,0.06);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
     display: grid;
     gap: 1.5rem;
     text-align: left;
@@ -883,11 +766,7 @@ footer small {
 #form-propuesta button:hover {
     background: var(--color-oscuro);
     transform: translateY(-5px);
-<<<<<<< HEAD
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-=======
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 }
 
 #sobre-asturias {
@@ -926,36 +805,12 @@ footer small {
 .sobre-imagen img {
     width: 100%;
     border-radius: 3rem;
-<<<<<<< HEAD
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
-=======
-    box-shadow: 0 40px 100px rgba(0,0,0,0.1);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
     border: 15px solid white;
     transform: rotate(2deg);
 }
 
-@media (max-width: 900px) {
-    .sobre-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-<<<<<<< HEAD
 
-=======
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
-    .sobre-texto {
-        text-align: center;
-        order: 2;
-    }
-<<<<<<< HEAD
-
-=======
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
-    .sobre-imagen {
-        order: 1;
-    }
-}
 
 #form-propuesta label {
     display: block;
@@ -991,11 +846,7 @@ footer small {
     outline: none;
     border-color: var(--color-rosa);
     background: white;
-<<<<<<< HEAD
     box-shadow: 0 10px 20px rgba(186, 0, 124, 0.05);
-=======
-    box-shadow: 0 10px 20px rgba(186,0,124,0.05);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 }
 
 #form-propuesta button {
@@ -1019,12 +870,8 @@ footer small {
 
 #zona-premium {
     position: relative;
-<<<<<<< HEAD
     padding: 5rem 2rem;
     /* Sección más compacta para ver mejor el fondo */
-=======
-    padding: 5rem 2rem; /* Sección más compacta para ver mejor el fondo */
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
     text-align: center;
     background-color: var(--color-oscuro);
     overflow: hidden;
@@ -1036,15 +883,10 @@ footer small {
     width: 100%;
     height: 100%;
     object-fit: cover;
-<<<<<<< HEAD
     object-position: center 25%;
     /* Ajustamos para que se vea mejor la parte superior de las casas */
     opacity: 0.4;
     /* Un poco más de presencia */
-=======
-    object-position: center 25%; /* Ajustamos para que se vea mejor la parte superior de las casas */
-    opacity: 0.4; /* Un poco más de presencia */
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
     z-index: 0;
 }
 
@@ -1084,13 +926,8 @@ footer small {
     margin: 0 auto 2rem;
     border-radius: 2rem;
     overflow: hidden;
-<<<<<<< HEAD
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
-=======
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-    border: 1px solid rgba(255,255,255,0.1);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 }
 
 .video-container iframe {
@@ -1143,7 +980,6 @@ footer small {
     letter-spacing: 2px;
 }
 
-<<<<<<< HEAD
 .color-rosa {
     color: var(--color-rosa);
 }
@@ -1155,11 +991,6 @@ footer small {
 .color-naranja {
     color: var(--color-naranja);
 }
-=======
-.color-rosa { color: var(--color-rosa); }
-.color-azul { color: var(--color-azul); }
-.color-naranja { color: var(--color-naranja); }
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 
 /* GALERIA PREMIUM */
 .galeria-grid {
@@ -1176,11 +1007,7 @@ footer small {
     border-radius: 2.5rem;
     overflow: hidden;
     height: 300px;
-<<<<<<< HEAD
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-=======
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 }
 
 .galeria-item img {
@@ -1197,11 +1024,7 @@ footer small {
 .galeria-overlay {
     position: absolute;
     inset: 0;
-<<<<<<< HEAD
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 10%, transparent 60%);
-=======
-    background: linear-gradient(to top, rgba(0,0,0,0.9) 10%, transparent 60%);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
     display: flex;
     align-items: flex-end;
     padding: 2rem;
@@ -1239,7 +1062,6 @@ footer small {
     vertical-align: middle;
 }
 
-<<<<<<< HEAD
 .badge-rosa {
     background-color: var(--color-rosa);
 }
@@ -1263,20 +1085,6 @@ footer small {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-=======
-.badge-rosa { background-color: var(--color-rosa); }
-.badge-azul { background-color: var(--color-azul); }
-.badge-naranja { background-color: var(--color-naranja); }
-.mision-caja {
-    max-width: 900px;
-    margin: 4rem auto 0; /* Reducimos margen para compactar la sección */
-    padding: 4rem 3rem;
-    border-radius: 3.5rem;
-    background: rgba(255, 255, 255, 0.05); /* Efecto exacto de los cuadros de stats */
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
     position: relative;
     overflow: hidden;
 }
@@ -1298,10 +1106,7 @@ footer small {
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.8;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 /* ---- FOOTER PREMIUM ---- */
 .footer-premium {
     position: relative;
@@ -1352,7 +1157,6 @@ footer small {
 }
 
 @keyframes float {
-<<<<<<< HEAD
     0% {
         transform: translateY(0px) rotate(0deg);
     }
@@ -1364,11 +1168,6 @@ footer small {
     100% {
         transform: translateY(0px) rotate(0deg);
     }
-=======
-    0% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-10px) rotate(5deg); }
-    100% { transform: translateY(0px) rotate(0deg); }
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 }
 
 .footer-social {
@@ -1384,11 +1183,7 @@ footer small {
     display: flex;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
     background: rgba(255, 255, 255, 0.1);
-=======
-    background: rgba(255,255,255,0.1);
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
     backdrop-filter: blur(5px);
     border-radius: 50%;
     color: white;
@@ -1401,10 +1196,7 @@ footer small {
     background: var(--color-rosa);
     transform: translateY(-5px);
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
 #mision::before {
     content: '';
     position: absolute;
@@ -1412,8 +1204,4 @@ footer small {
     background: url('../imagenes/fondo2.jpg') center/cover no-repeat;
     opacity: 0.3;
     z-index: 0;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 246be30941fa8b715c6189f25be317de3ed3b0f8
