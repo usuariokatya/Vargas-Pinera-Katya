@@ -16,8 +16,13 @@ Eh organizado el proyecto en las carpetas que nos pedían:
   - `style.css` — Imports.
   - `assets/imagenes/` — Logos e iconos.
   - `assets/galeria/` — Fotos de los eventos.
+  - `variables.css` — Variables CSS globales (colores, fuentes y tamaños).
+  - `header-footer.css` — Estilos del header y footer.
+  - `componentes.css` — Estilos de tarjetas, botones y elementos reutilizables.
+  - `hero-secciones.css` — Estilos del hero y las secciones principales.
 
-- **Base de datos:** Tablas en Oracle SQL Developer (Eventos, Usuarios, Galerias, Imagenes y Favoritos) con datos de prueba, IDs automaticos, constraints y vistas. El diagrama E-R está hecho en Dia y TOAD.
+
+- **Base de datos:** Tablas en Oracle SQL Developer (Eventos, Usuarios, Galerias, Imagenes y Favoritos) con datos de prueba, IDs automaticos, constraints y vistas. El diagrama E-R está hecho en Dia y TOAD. Los scripts están organizados en subcarpetas según el programa que use (Oracle, Toad, Dia).
 
 - **Programación:** JavaScript para el calendario dinámico y los filtros de categoria. La parte de Java está pendiente.
 
@@ -50,6 +55,9 @@ Eh seguido los colores del PDF:
 - **Gradiente en texto** — `linear-gradient` + `background-clip: text` para que se vean los colores a traves de las letras.
 - **`aspect-ratio: 16/9`** — para que los vídeos de YouTube no se deformen en ningun tamaño.
 - **Bordes con gradiente en las cards** — con `padding-box` y `border-box` para mezclar colores sin afectar el fondo.
+- **Separar el CSS** — dividir un archivo grande en varios más pequeños por sección, así es más fácil encontrar los fallos y hacer cambios de diseño.
+- **Reemplazo masivo en VS Code** — para cambiar rutas de muchos archivos a la vez sin tener que ir uno a uno.
+
 
 ## Lo que he usado
 
