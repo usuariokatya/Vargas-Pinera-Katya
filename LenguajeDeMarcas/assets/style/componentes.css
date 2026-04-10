@@ -1,0 +1,330 @@
+/* ---- TÍTULO MULTICOLOR ---- */
+.titulo-multicolor {
+    line-height: 1.3;
+    padding: 0.2rem 0;
+    overflow: visible;
+}
+
+.titulo-multicolor span {
+    display: inline-block;
+    padding: 0 0.2rem;
+}
+
+.titulo-multicolor span:nth-child(1) {
+    color: var(--color-rosa);
+}
+
+.titulo-multicolor span:nth-child(2) {
+    color: #ff6b35;
+}
+
+.titulo-multicolor span:nth-child(3) {
+    color: var(--color-naranja);
+}
+
+.titulo-multicolor span:nth-child(4) {
+    color: #ffd600;
+}
+
+.titulo-multicolor span:nth-child(5) {
+    color: #4caf50;
+}
+
+.titulo-multicolor span:nth-child(6) {
+    color: var(--color-azul);
+}
+
+.titulo-multicolor span:nth-child(7) {
+    color: var(--color-morado);
+}
+
+.titulo-multicolor span:nth-child(8) {
+    color: var(--color-rosa);
+}
+
+.texto-magia {
+    background: linear-gradient(90deg, var(--color-rosa), var(--color-morado));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
+.texto-cultural {
+    background: linear-gradient(90deg, var(--color-azul), #00d2ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
+.texto-blanco {
+    color: var(--color-blanco);
+    -webkit-text-fill-color: white;
+}
+
+/* ---- FILTROS ---- */
+#filtros {
+    background-color: #e8e8e8;
+    padding: 1rem 2rem;
+}
+
+#filtros ul {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#filtros li a,
+#filtros li button {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.75rem;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#filtros li a:hover,
+#filtros li button:hover {
+    transform: translateY(-3px);
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+#filtros li a[data-categoria="musica"]:hover,
+#filtros li a[data-categoria="festivales"]:hover {
+    background: var(--color-rosa);
+}
+
+#filtros li a[data-categoria="cine"]:hover,
+#filtros li a[data-categoria="teatro"]:hover,
+#filtros li a[data-categoria="danza"]:hover {
+    background: var(--color-azul);
+}
+
+#filtros li a[data-categoria="arte"]:hover {
+    background: var(--color-naranja);
+}
+
+#filtros li a[data-categoria="todos"]:hover {
+    background: var(--color-oscuro);
+}
+
+/* ---- EVENTO CARD ---- */
+.evento-card {
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(135deg, var(--color-naranja), var(--color-rosa), var(--color-azul)) border-box;
+    border: 3px solid transparent;
+    border-radius: 3rem;
+    overflow: hidden;
+    padding: 1.25rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 580px;
+    text-align: left;
+}
+
+.evento-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+}
+
+.evento-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.evento-card h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    color: #1a1a1a;
+    padding: 0 0.5rem;
+}
+
+.evento-card p:not(.stats) {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    padding: 0 0.5rem;
+}
+
+.bottom-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+.evento-card .stats {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #333;
+    display: flex;
+    gap: 1rem;
+}
+
+.boton-follow {
+    background: #f0f0f0;
+    color: #1a1a1a;
+    padding: 0.5rem 1.2rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.boton-follow:hover {
+    background: #e0e0e0;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(249, 115, 22, 0.3);
+}
+
+.evento-pasado {
+    background: var(--color-blanco);
+    border-radius: 2rem;
+    overflow: hidden;
+    opacity: 0.7;
+    filter: grayscale(1);
+    transition: all 0.5s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.evento-pasado:hover {
+    opacity: 1;
+    filter: grayscale(0);
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.evento-pasado img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.status-pasado {
+    padding: 0.75rem;
+    background: #f8f8f8;
+    color: #999;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+/* ---- BADGES ---- */
+.badge-verificado {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 10px;
+    color: white;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.badge-rosa {
+    background-color: var(--color-rosa);
+}
+
+.badge-azul {
+    background-color: var(--color-azul);
+}
+
+.badge-naranja {
+    background-color: var(--color-naranja);
+}
+
+/* ---- GALERÍA PREMIUM ---- */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto 0;
+    list-style: none;
+}
+
+.galeria-item {
+    position: relative;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    height: 300px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.galeria-item:hover img {
+    transform: scale(1.15);
+}
+
+.galeria-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 10%, transparent 60%);
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.galeria-item:hover .galeria-overlay {
+    opacity: 1;
+}
+
+.galeria-overlay span {
+    color: white;
+    font-weight: 800;
+    font-size: 1.1rem;
+    transform: translateY(10px);
+    transition: transform 0.4s ease;
+}
+
+.galeria-item:hover .galeria-overlay span {
+    transform: translateY(0);
+}
+
+/* ---- COLORES HELPER ---- */
+.color-rosa {
+    color: var(--color-rosa);
+}
+
+.color-azul {
+    color: var(--color-azul);
+}
+
+.color-naranja {
+    color: var(--color-naranja);
+}
