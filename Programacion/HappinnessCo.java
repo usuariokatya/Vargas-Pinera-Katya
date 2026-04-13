@@ -7,302 +7,169 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class HappinnessCo {
-
-    // Constantes del menú
-    static final int PRIMERA_OPCION_MENU = 1;
-    static final int ULTIMA_OPCION_MENU = 9;
-
-    // Colecciones
     static HashMap<String, Usuario> usuarios = new HashMap<>();
     static HashMap<Integer, Evento> eventos = new HashMap<>();
     static ArrayList<Favorito> favoritos = new ArrayList<>();
-
-    // Contadores para IDs autogenerados
+    static Scanner teclado = new Scanner(System.in);
     static int contadorEventos = 0;
     static int contadorGalerias = 0;
 
-    static Scanner teclado = new Scanner(System.in);
-
     public static void main(String[] args) {
         int opcion;
-
         do {
-            System.out.println("========================================");
-            System.out.println(
-                    "HAPPINESS&CO - MENU\n 1. Añadir usuario\n 2. Eliminar usuario\n 3. Añadir evento\n 4. Eliminar evento\n 5. Añadir galería\n 6. Eliminar galería\n 7. Añadir favorito\n 8. Eliminar favorito\n 9. Salir");
-            System.out.println("========================================");
-
-            // SOLICITO AL USUARIO QUE INGRESE UNA OPCIÓN DEL MENÚ
-            System.out.println("Introduce una opción del Menú (1-9): ");
+            System.out.println("\n========== HAPPINESS & CO ==========");
+            System.out.println("1. Añadir usuario      2. Eliminar usuario");
+            System.out.println("3. Añadir evento       4. Eliminar evento");
+            System.out.println("5. Añadir galería      6. Eliminar galería");
+            System.out.println("7. Añadir favorito     8. Eliminar favorito");
+            System.out.println("9. Salir");
+            System.out.print("Seleccione una opción: ");
             opcion = teclado.nextInt();
-            teclado.nextLine(); // Limpiar buffer
+            teclado.nextLine();
 
-            // COMPRUEBO LA VALIDEZ DE LA OPCIÓN INTRODUCIDA
-            opcion = comprobarMenu(opcion, teclado);
-
-            // DESPLIEGO OPCIONES
             switch (opcion) {
                 case 1:
-                    annadirUsuario();
+                    añadirUsuario();
                     break;
                 case 2:
                     eliminarUsuario();
                     break;
                 case 3:
-                    annadirEvento();
+                    añadirEvento();
                     break;
                 case 4:
                     eliminarEvento();
                     break;
                 case 5:
-                    annadirGaleria();
+                    añadirGaleria();
                     break;
                 case 6:
                     eliminarGaleria();
                     break;
                 case 7:
-                    annadirFavorito();
+                    añadirFavorito();
                     break;
                 case 8:
                     eliminarFavorito();
                     break;
-                case 9:
-                    System.out.println("Su sesión ha finalizado. Gracias.");
             }
         } while (opcion != 9);
-
-        teclado.close();
     }
 
-    public static int comprobarMenu(int opcion, Scanner teclado) {
-        while (opcion < PRIMERA_OPCION_MENU || opcion > ULTIMA_OPCION_MENU) {
-            System.out.println(
-                    "Opción NO válida\n========================================\nHAPPINESS&CO - MENU\n 1. Añadir usuario\n 2. Eliminar usuario\n 3. Añadir evento\n 4. Eliminar evento\n 5. Añadir galería\n 6. Eliminar galería\n 7. Añadir favorito\n 8. Eliminar favorito\n 9. Salir\n========================================\nIntroduce una opción válida (1-9): ");
-            opcion = teclado.nextInt();
-            teclado.nextLine(); // Limpiar buffer
-        }
-        return opcion;
-    }
-
-    public static void annadirUsuario() {
-        String nombreUsuario;
-        String emailUsuario;
-        String passwordUsuario;
-
+    public static void añadirUsuario() {
         System.out.println("\n--- Añadir Usuario ---");
-        System.out.print("Introduce el nombre: ");
-        nombreUsuario = teclado.nextLine();
         System.out.print("Introduce el email: ");
-        emailUsuario = teclado.nextLine();
-        System.out.print("Introduce la contraseña: ");
-        passwordUsuario = teclado.nextLine();
+        String email = teclado.nextLine();
 
-        if (usuarios.containsKey(emailUsuario)) {
-            System.out.println("El usuario ya existe");
+        if (usuarios.containsKey(email)) {
+            System.out.println("Error: El usuario ya existe");
         } else {
-            Usuario nuevoUsuario = new Usuario(nombreUsuario, emailUsuario, passwordUsuario);
-            usuarios.put(emailUsuario, nuevoUsuario);
-            System.out.println("Usuario creado correctamente");
+            System.out.print("Introduce el nombre: ");
+            String nombre = teclado.nextLine();
+            System.out.print("Introduce el password: ");
+            String password = teclado.nextLine();
+            Usuario nuevoUsuario = new Usuario(usuarios.size() + 1, nombre, email, password);
+            usuarios.put(email, nuevoUsuario);
+            System.out.println("Usuario añadido correctamente");
         }
     }
 
     public static void eliminarUsuario() {
-        String correoEliminar;
-
-        System.out.println("\n--- Eliminar Usuario ---");
-        System.out.print("Introduce el correo del usuario a eliminar: ");
-        correoEliminar = teclado.nextLine();
-
-        if (usuarios.containsKey(correoEliminar)) {
-            usuarios.remove(correoEliminar);
-            System.out.println("Usuario eliminado correctamente");
+        System.out.print("Email del usuario a borrar: ");
+        String email = teclado.nextLine();
+        if (usuarios.remove(email) != null) {
+            favoritos.removeIf(f -> f.getCorreoUsuario().equals(email));
+            System.out.println("Usuario eliminado");
         } else {
-            System.out.println("El usuario no existe");
+            System.out.println("No existe el usuario");
         }
     }
 
-    public static void annadirEvento() {
-        String fechaEvento;
-        String tituloEvento;
-        String ubicacionEvento;
-        String descripcionEvento;
-
-        System.out.println("\n--- Añadir Evento ---");
-        System.out.print("Introduce la fecha: ");
-        fechaEvento = teclado.nextLine();
-        System.out.print("Introduce el título: ");
-        tituloEvento = teclado.nextLine();
-        System.out.print("Introduce la ubicación: ");
-        ubicacionEvento = teclado.nextLine();
-        System.out.print("Introduce la descripción: ");
-        descripcionEvento = teclado.nextLine();
-
-        Evento nuevoEvento = new Evento(contadorEventos, fechaEvento, tituloEvento, ubicacionEvento, descripcionEvento);
-        eventos.put(contadorEventos, nuevoEvento);
+    public static void añadirEvento() {
         contadorEventos++;
-        System.out.println("Evento creado correctamente");
+        System.out.print("Título: ");
+        String t = teclado.nextLine();
+        System.out.print("Fecha: ");
+        String f = teclado.nextLine();
+        System.out.print("Ubicación: ");
+        String u = teclado.nextLine();
+        System.out.print("Descripción: ");
+        String d = teclado.nextLine();
+        eventos.put(contadorEventos, new Evento(contadorEventos, f, t, u, d));
+        System.out.println("Evento creado con ID: " + contadorEventos);
     }
 
     public static void eliminarEvento() {
-        int idEventoEliminar;
-        ArrayList<Integer> clavesEventos;
-
         System.out.println("\n--- Eliminar Evento ---");
-        System.out.println("Listado de eventos:");
-        clavesEventos = new ArrayList<>(eventos.keySet());
-        for (int i = 0; i < clavesEventos.size(); i++) {
-            System.out.println(eventos.get(clavesEventos.get(i)));
-        }
-
         System.out.print("Introduce el id del evento a eliminar: ");
-        idEventoEliminar = teclado.nextInt();
-        teclado.nextLine(); // Limpiar buffer
+        int idEliminar = teclado.nextInt();
+        teclado.nextLine();
 
-        if (eventos.containsKey(idEventoEliminar)) {
-            eventos.remove(idEventoEliminar);
-            System.out.println("Evento eliminado correctamente");
+        if (eventos.containsKey(idEliminar)) {
+            eventos.remove(idEliminar);
+            favoritos.removeIf(f -> f.getIdEvento() == idEliminar);
+            System.out.println("Evento y datos asociados eliminados");
         } else {
-            System.out.println("El evento no existe");
+            System.out.println("Error: El evento no existe");
         }
     }
 
-    public static void annadirGaleria() {
-        int idEventoGaleria;
-        String tituloGaleria;
-        ArrayList<Integer> clavesEventos;
-
-        System.out.println("\n--- Añadir Galería ---");
-        System.out.println("Listado de eventos:");
-        clavesEventos = new ArrayList<>(eventos.keySet());
-        for (int i = 0; i < clavesEventos.size(); i++) {
-            System.out.println(eventos.get(clavesEventos.get(i)));
-        }
-
-        System.out.print("Introduce el id del evento: ");
-        idEventoGaleria = teclado.nextInt();
-        teclado.nextLine(); // Limpiar buffer
-
-        if (!eventos.containsKey(idEventoGaleria)) {
-            System.out.println("Error: El evento no existe");
-        } else {
-            System.out.print("Introduce el título de la galería: ");
-            tituloGaleria = teclado.nextLine();
-
-            Galeria nuevaGaleria = new Galeria(contadorGalerias, tituloGaleria, idEventoGaleria);
-            eventos.get(idEventoGaleria).getGalerias().put(contadorGalerias, nuevaGaleria);
+    public static void añadirGaleria() {
+        for (Evento e : eventos.values())
+            System.out.println(e);
+        System.out.print("ID Evento: ");
+        int idEv = teclado.nextInt();
+        teclado.nextLine();
+        if (eventos.containsKey(idEv)) {
             contadorGalerias++;
-            System.out.println("Galería creada correctamente");
+            System.out.print("Título Galería: ");
+            String tit = teclado.nextLine();
+            Galeria g = new Galeria(contadorGalerias, tit, idEv);
+            eventos.get(idEv).getGalerias().put(contadorGalerias, g);
+            System.out.println("Galería añadida");
         }
     }
 
     public static void eliminarGaleria() {
-        int idEventoElimGaleria;
-        int idGaleriaEliminar;
-        Evento eventoSeleccionado;
-        ArrayList<Integer> clavesEventos;
-        ArrayList<Integer> clavesGalerias;
-
-        System.out.println("\n--- Eliminar Galería ---");
-        System.out.println("Listado de eventos:");
-        clavesEventos = new ArrayList<>(eventos.keySet());
-        for (int i = 0; i < clavesEventos.size(); i++) {
-            System.out.println(eventos.get(clavesEventos.get(i)));
-        }
-
-        System.out.print("Introduce el id del evento: ");
-        idEventoElimGaleria = teclado.nextInt();
-        teclado.nextLine(); // Limpiar buffer
-
-        if (!eventos.containsKey(idEventoElimGaleria)) {
-            System.out.println("Error: El evento no existe");
-        } else {
-            eventoSeleccionado = eventos.get(idEventoElimGaleria);
-            System.out.println("Listado de galerías del evento:");
-            clavesGalerias = new ArrayList<>(eventoSeleccionado.getGalerias().keySet());
-            for (int i = 0; i < clavesGalerias.size(); i++) {
-                System.out.println(eventoSeleccionado.getGalerias().get(clavesGalerias.get(i)));
-            }
-
-            System.out.print("Introduce el id de la galería a eliminar: ");
-            idGaleriaEliminar = teclado.nextInt();
-            teclado.nextLine(); // Limpiar buffer
-
-            if (eventoSeleccionado.getGalerias().containsKey(idGaleriaEliminar)) {
-                eventoSeleccionado.getGalerias().remove(idGaleriaEliminar);
-                System.out.println("Galería eliminada correctamente");
-            } else {
-                System.out.println("La galería no existe");
-            }
+        System.out.print("ID Evento: ");
+        int idEv = teclado.nextInt();
+        teclado.nextLine();
+        if (eventos.containsKey(idEv)) {
+            Evento ev = eventos.get(idEv);
+            for (Galeria g : ev.getGalerias().values())
+                System.out.println(g);
+            System.out.print("ID Galería a borrar: ");
+            int idG = teclado.nextInt();
+            if (ev.getGalerias().remove(idG) != null)
+                System.out.println("Eliminada");
         }
     }
 
-    public static void annadirFavorito() {
-        int idEventoFav;
-        String correoFav;
-        ArrayList<Integer> clavesEventos;
-        ArrayList<String> clavesUsuarios;
-
-        System.out.println("\n--- Añadir Favorito ---");
-        System.out.println("Listado de eventos:");
-        clavesEventos = new ArrayList<>(eventos.keySet());
-        for (int i = 0; i < clavesEventos.size(); i++) {
-            System.out.println(eventos.get(clavesEventos.get(i)));
-        }
-        System.out.println("\nListado de usuarios:");
-        clavesUsuarios = new ArrayList<>(usuarios.keySet());
-        for (int i = 0; i < clavesUsuarios.size(); i++) {
-            System.out.println(usuarios.get(clavesUsuarios.get(i)));
-        }
-
-        System.out.print("Introduce el id del evento: ");
-        idEventoFav = teclado.nextInt();
-        teclado.nextLine(); // Limpiar buffer
-
-        if (!eventos.containsKey(idEventoFav)) {
-            System.out.println("Error: El evento no existe");
-        } else {
-            System.out.print("Introduce el correo del usuario: ");
-            correoFav = teclado.nextLine();
-
-            if (!usuarios.containsKey(correoFav)) {
-                System.out.println("Error: El usuario no existe");
-            } else {
-                Favorito nuevoFavorito = new Favorito(correoFav, idEventoFav);
-                favoritos.add(nuevoFavorito);
-                System.out.println("Favorito creado correctamente");
-            }
+    public static void añadirFavorito() {
+        for (Evento e : eventos.values())
+            System.out.println(e);
+        for (Usuario u : usuarios.values())
+            System.out.println(u);
+        System.out.print("ID Evento: ");
+        int id = teclado.nextInt();
+        teclado.nextLine();
+        System.out.print("Email: ");
+        String mail = teclado.nextLine();
+        if (eventos.containsKey(id) && usuarios.containsKey(mail)) {
+            favoritos.add(new Favorito(mail, id));
+            System.out.println("Favorito creado");
         }
     }
 
     public static void eliminarFavorito() {
-        int idEventoElimFav;
-        String correoElimFav;
-        boolean encontrado;
-
-        System.out.println("\n--- Eliminar Favorito ---");
-        System.out.println("Listado de favoritos:");
-        for (int i = 0; i < favoritos.size(); i++) {
-            System.out.println(favoritos.get(i));
-        }
-
-        System.out.print("Introduce el id del evento del favorito: ");
-        idEventoElimFav = teclado.nextInt();
-        teclado.nextLine(); // Limpiar buffer
-        System.out.print("Introduce el correo del usuario del favorito: ");
-        correoElimFav = teclado.nextLine();
-
-        encontrado = false;
-        for (int i = 0; i < favoritos.size(); i++) {
-            if (favoritos.get(i).getIdEvento() == idEventoElimFav &&
-                    favoritos.get(i).getCorreoUsuario().equals(correoElimFav)) {
-                favoritos.remove(i);
-                encontrado = true;
-                System.out.println("Favorito eliminado correctamente");
-                break;
-            }
-        }
-        if (!encontrado) {
-            System.out.println("El favorito no existe");
-        }
+        for (Favorito f : favoritos)
+            System.out.println(f);
+        System.out.print("ID Evento: ");
+        int id = teclado.nextInt();
+        teclado.nextLine();
+        System.out.print("Email: ");
+        String mail = teclado.nextLine();
+        favoritos.removeIf(f -> f.getIdEvento() == id && f.getCorreoUsuario().equals(mail));
+        System.out.println("Proceso de eliminación finalizado");
     }
 }
