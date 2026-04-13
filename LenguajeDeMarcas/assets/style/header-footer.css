@@ -1,4 +1,3 @@
-/* ---- HEADER ---- */
 header {
     position: sticky;
     top: 0;
@@ -6,35 +5,12 @@ header {
     background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-}
-
-header nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.75rem 2rem;
-    width: 100%;
-}
-
-header nav ul {
-    display: flex;
-    gap: 2rem;
-}
-
-header nav ul a {
-    font-weight: 700;
-    font-size: 1rem;
-    color: #1a1a1a;
-    transition: all 0.3s ease;
-    position: relative;
-    padding-bottom: 4px;
 }
 
 header nav ul a::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -4px;
     left: 0;
     width: 0;
     height: 3px;
@@ -43,52 +19,8 @@ header nav ul a::after {
     border-radius: 99px;
 }
 
-header nav ul a:hover {
-    color: var(--color-rosa);
-}
-
 header nav ul a:hover::after {
     width: 100%;
-}
-
-header nav form {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-header nav form label {
-    display: none;
-}
-
-header nav form input[type="search"] {
-    border: 2px solid #1a1a1a;
-    border-radius: 9999px;
-    padding: 0.4rem 1rem;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
-    background-color: #1a1a1a;
-    color: var(--color-blanco);
-    outline: none;
-}
-
-header nav form button {
-    background: #1a1a1a;
-    color: white;
-    border: none;
-    border-radius: 9999px;
-    padding: 0.4rem 0.8rem;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-/* ---- FOOTER PREMIUM ---- */
-.footer-premium {
-    position: relative;
-    padding: 6rem 2rem;
-    text-align: center;
-    overflow: hidden;
-    background-color: var(--color-oscuro);
 }
 
 .footer-bg {
@@ -97,31 +29,8 @@ header nav form button {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.2;
+    filter: brightness(0.3);
     z-index: 0;
-}
-
-.footer-contenido {
-    position: relative;
-    z-index: 10;
-}
-
-.footer-logo {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
-
-.footer-logo img {
-    border-radius: 0.5rem;
-}
-
-.footer-copyright {
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
 }
 
 .deco-ampersand {
@@ -132,64 +41,26 @@ header nav form button {
 }
 
 @keyframes float {
-    0% {
+
+    0%,
+    100% {
         transform: translateY(0px) rotate(0deg);
     }
 
     50% {
         transform: translateY(-10px) rotate(5deg);
     }
-
-    100% {
-        transform: translateY(0px) rotate(0deg);
-    }
 }
 
-.footer-social {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.footer-social a {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    border-radius: 50%;
-    color: white;
-    font-weight: 700;
-    font-size: 0.8rem;
-    transition: all 0.3s ease;
-}
-
-.footer-social a:hover {
-    background: var(--color-rosa);
-    transform: translateY(-5px);
-}
-
-footer {
-    background-color: var(--color-oscuro);
-    color: var(--color-blanco);
-    padding: 3rem 2rem;
-    text-align: center;
+.footer-contenido {
     position: relative;
+    z-index: 10;
 }
 
-footer small {
+.footer-copyright {
+    color: rgba(255, 255, 255, 0.4);
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-#mision::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('../imagenes/fondo2.jpg') center/cover no-repeat;
-    opacity: 0.3;
-    z-index: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
