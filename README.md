@@ -1,10 +1,8 @@
 # Mi Proyecto: HAPPINESS&Co
 
-Este es el repositorio donde estaré subiendo todo el proyecto de la agenda 
-cultural HAPPINESS&Co, una web para descubrir eventos culturales de Asturias: 
-música, teatro, cine, arte, festivales y mucho más.
+Este es el repositorio donde estaré subiendo todo el proyecto de la agenda cultural HAPPINESS&Co, una web para descubrir eventos culturales de Asturias: música, teatro, cine, arte, festivales y mucho más.
 
-Eh organizado el proyecto en las carpetas que nos pedían:
+He organizado el proyecto en las carpetas que nos pedían:
 
 - **Lenguaje de marcas:**
   - `index.html` — Página principal con los eventos, un vídeo de Asturias y estadísticas.
@@ -24,15 +22,15 @@ Eh organizado el proyecto en las carpetas que nos pedían:
 
 - **Base de datos:** Tablas en Oracle SQL Developer (Eventos, Usuarios, Galerias, Imagenes y Favoritos) con datos de prueba, IDs automaticos, constraints y vistas. El diagrama E-R está hecho en Dia y TOAD. Los scripts están organizados en subcarpetas según el programa que use (Oracle, Toad, Dia).
 
-- **Programación:** JavaScript para el calendario dinámico y los filtros de categoria. La parte de Java está pendiente.
+- **Programación:** JavaScript para el calendario dinámico y los filtros de categoria. En la parte de Java he usado **HashMaps** para que las búsquedas de usuarios y eventos sean rápidas y **ArrayList** para los favoritos, con lógica de **borrado en cascada** para que no queden datos sueltos.
 
 - **RSS:** Archivo XML con los 3 próximos eventos en formato RSS 2.0, ya conectado al index.html.
 
 ## Sobre el diseño
 
-Primero hice el boceto en blanco y negro para planear la estructura, luego lo  pasé a color siguiendo la paleta del PDF. Después diseñe el resto de secciones en Figma.
+Primero hice el boceto en blanco y negro para planear la estructura, luego lo pasé a color siguiendo la paleta del PDF. Después diseñe el resto de secciones en Figma.
 
-Eh seguido los colores del PDF:
+He seguido los colores del PDF:
 
 - Rosa `#ba007c` para música y logo.
 - Azul `#009bdb` para cine y teatro.
@@ -41,6 +39,8 @@ Eh seguido los colores del PDF:
 
 ## Lo que he aprendido
 
+- **Lógica en Java** — como usar `.containsKey()` para que no se repitan usuarios y `removeIf` para borrar favoritos automáticamente.
+- **Arreglar el CSS** — usar `display: inline-block` para que los efectos del menú no se muevan mal cuando usas Tailwind.
 - **`CREATE VIEW` en Oracle SQL** — como guardar una consulta con nombre y usarla como si fuera una tabla normal.
 - **`SEQUENCE`** — en Oracle no existe AUTO_INCREMENT, hay que crear una secuencia aparte para los IDs.
 - **`ON DELETE CASCADE`** — si borras un evento se borran automaticamente sus galerias e imagenes.
@@ -61,4 +61,4 @@ Eh seguido los colores del PDF:
 
 ## Lo que he usado
 
-VS Code, Figma, Oracle SQL Developer, TOAD, Git y GitHub. HTML, CSS, Tailwind CSS y JavaScript.
+VS Code, Figma, Oracle SQL Developer, TOAD, Git y GitHub. HTML, CSS, Tailwind CSS, JavaScript y Java.
