@@ -1,16 +1,14 @@
-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+header nav ul a {
+    position: relative;
+    display: inline-block;
+    padding: 4px 0;
+    transition: color 0.3s ease;
 }
 
 header nav ul a::after {
     content: '';
     position: absolute;
-    bottom: -4px;
+    bottom: -2px;
     left: 0;
     width: 0;
     height: 3px;
