@@ -1,3 +1,4 @@
+
 /*
   @author katya
  */
@@ -11,7 +12,6 @@ public class Evento {
     private String descripcion;
     private HashMap<Integer, Galeria> galerias;
 
-    // Constructor
     public Evento(int id, String fecha, String titulo, String ubicacion, String descripcion) {
         this.id = id;
         this.fecha = fecha;
@@ -21,21 +21,12 @@ public class Evento {
         this.galerias = new HashMap<>();
     }
 
-    // Getters
     public int getId() {
         return id;
     }
 
-    public String getFecha() {
-        return fecha;
-    }
-
     public String getTitulo() {
         return titulo;
-    }
-
-    public String getUbicacion() {
-        return ubicacion;
     }
 
     public String getDescripcion() {
@@ -46,40 +37,8 @@ public class Evento {
         return galerias;
     }
 
-    // Setters
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public void setUbicacion(String ubicacion) {
-        this.ubicacion = ubicacion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public void setGalerias(HashMap<Integer, Galeria> galerias) {
-        this.galerias = galerias;
-    }
-
-    // toString
+    @Override
     public String toString() {
-        return "Evento{" +
-                "id=" + id +
-                ", fecha='" + fecha + '\'' +
-                ", titulo='" + titulo + '\'' +
-                ", ubicacion='" + ubicacion + '\'' +
-                ", descripcion='" + descripcion + '\'' +
-                ", galerias=" + galerias +
-                '}';
+        return "ID: " + id + " | " + titulo + " (" + fecha + ") en " + ubicacion + " - " + descripcion;
     }
 }
