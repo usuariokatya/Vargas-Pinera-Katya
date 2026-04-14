@@ -24,7 +24,7 @@ He organizado el proyecto en las carpetas que nos pedían:
 
 - **Programación:** JavaScript para el calendario dinámico y los filtros de categoria. En la parte de Java he usado **HashMaps** para que las búsquedas de usuarios y eventos sean rápidas y **ArrayList** para los favoritos, con lógica de **borrado en cascada** para que no queden datos sueltos.
 
-- **RSS:** Archivo XML con los 3 próximos eventos en formato RSS 2.0, ya conectado al index.html.
+- **RSS:** Archivo XML con los 9 eventos de la web en formato RSS 2.0. He configurado los links de forma local para que funcionen correctamente sin tener que subir la web a internet.
 
 ## Sobre el diseño
 
@@ -57,6 +57,9 @@ He seguido los colores del PDF:
 - **Bordes con gradiente en las cards** — con `padding-box` y `border-box` para mezclar colores sin afectar el fondo.
 - **Separar el CSS** — dividir un archivo grande en varios más pequeños por sección, así es más fácil encontrar los fallos y hacer cambios de diseño.
 - **Reemplazo masivo en VS Code** — para cambiar rutas de muchos archivos a la vez sin tener que ir uno a uno.
+- **Optimización de RSS para local** — Usar nombres de mis archivos (como eventos.html) en los links del XML para que no den error.
+- **Sincronización de Git** — Solucionar errores de push haciendo pull para bajar los cambios que había en GitHub y que no tenía en mi ordenador.
+- **Mejoras en el menú de Java** — Hacer que el programa te liste primero los datos que ya existen (como los emails o IDs) antes de pedirte escribir nada, para que sea mucho más fácil de usar y no haya fallos.
 
 
 ## Lo que he usado
