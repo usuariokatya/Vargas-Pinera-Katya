@@ -1,6 +1,20 @@
 # Mi Proyecto: HAPPINESS&Co
 
+<p align="center">
+  <img src="assets/imagenes/happines-and-co-propuesta-02.jpg" alt="Logo Happiness & Co" width="450" style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+</p>
+
 Este es el repositorio donde estaré subiendo todo el proyecto de la agenda cultural HAPPINESS&Co, una web para descubrir eventos culturales de Asturias: música, teatro, cine, arte, festivales y mucho más.
+
+## Cómo descargar y ejecutar el proyecto
+
+Para que el proyecto funcione correctamente en tu ordenador, sigue estos pasos:
+
+1. **Descargar:** Haz clic en el botón verde `<> Code` y selecciona **Download ZIP**.
+2. **Web (HTML/CSS/JS):** Abre el archivo `index.html` en tu navegador. Los enlaces funcionan de forma **local**, por lo que podrás navegar por todas las secciones sin errores.
+3. **Java (Programación):** Importa la carpeta en tu IDE (Eclipse o IntelliJ) y ejecuta la clase principal `HappinnessCo.java`.
+4. **Base de Datos:** Los scripts SQL están listos para **Oracle SQL Developer**. Ejecuta primero el de creación de tablas y luego el de inserción de datos.
+5. **RSS:** El archivo `happinnes&co.xml` puede abrirse directamente en el navegador para verificar la sindicación de contenidos.
 
 He organizado el proyecto en las carpetas que nos pedían:
 
@@ -18,7 +32,6 @@ He organizado el proyecto en las carpetas que nos pedían:
   - `header-footer.css` — Estilos del header y footer.
   - `componentes.css` — Estilos de tarjetas, botones y elementos reutilizables.
   - `hero-secciones.css` — Estilos del hero y las secciones principales.
-
 
 - **Base de datos:** Tablas en Oracle SQL Developer (Eventos, Usuarios, Galerias, Imagenes y Favoritos) con datos de prueba, IDs automaticos, constraints y vistas. El diagrama E-R está hecho en Dia y TOAD. Los scripts están organizados en subcarpetas según el programa que use (Oracle, Toad, Dia).
 
@@ -60,7 +73,6 @@ He seguido los colores del PDF:
 - **Optimización de RSS para local** — Usar nombres de mis archivos (como eventos.html) en los links del XML para que no den error.
 - **Sincronización de Git** — Solucionar errores de push haciendo pull para bajar los cambios que había en GitHub y que no tenía en mi ordenador.
 - **Mejoras en el menú de Java** — Hacer que el programa te liste primero los datos que ya existen (como los emails o IDs) antes de pedirte escribir nada, para que sea mucho más fácil de usar y no haya fallos.
-
 
 ## Lo que he usado
 
