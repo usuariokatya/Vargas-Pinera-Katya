@@ -1,37 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>HAPPINESS&amp;Co - Próximos Eventos</title>
-    <link>http://www.happinessco.com</link>
-    <description>Agenda cultural con los próximos eventos de HAPPINESS&amp;Co</description>
+    <title>HAPPINESS&amp;Co - Agenda Completa</title>
+    <link>index.html</link>
+    <description>Catálogo de los 9 eventos culturales (3 finalizados y 6 próximos)</description>
     <language>es-es</language>
 
     <item>
       <title>Festival Boombastic</title>
-      <link>http://www.happinessco.com/eventos/boombastic</link>
-      <description>Macrofestival líder de música urbana, pop y electrónica en La Morgal, Llanera.</description>
+      <link>eventos.html</link>
+      <description>Macrofestival líder de música urbana en La Morgal.</description>
       <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Música (#ba007c)</category>
     </item>
 
     <item>
       <title>Mamma Mia!</title>
-      <link>http://www.happinessco.com/eventos/mamma-mia</link>
+      <link>eventos.html</link>
       <description>El Musical basado en los éxitos de ABBA en el Teatro Campoamor.</description>
       <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Teatro (#009bdb)</category>
     </item>
 
     <item>
       <title>Tarzán Musical</title>
-      <link>http://www.happinessco.com/eventos/tarzan</link>
-      <description>Adaptación del clásico literario en Avilés.</description>
+      <link>eventos.html</link>
+      <description>Adaptación del clásico de la literatura en Avilés.</description>
       <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Teatro (#009bdb)</category>
     </item>
 
     <item>
       <title>Festival Metropolis</title>
-      <link>http://www.happinessco.com/eventos/metropolis</link>
-      <description>Más de 10 días de conciertos, humor y mucho más en Gijón.</description>
-      <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
+      <link>eventos.html</link>
+      <description>Cultura urbana, cómic y conciertos en Gijón.</description>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Festivales (#ba007c)</category>
+    </item>
+
+    <item>
+      <title>Arte Velásquez</title>
+      <link>eventos.html</link>
+      <description>Exposición única de artistas locales en Gijón.</description>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Exposición (#ff7b00)</category>
+    </item>
+
+    <item>
+      <title>Cine Yelmo Ocimax</title>
+      <link>eventos.html</link>
+      <description>Estrenos de cartelera y espectáculos en directo.</description>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Cine (#009bdb)</category>
+    </item>
+
+    <item>
+      <title>Teatro Asturias (Finalizado)</title>
+      <link>eventos.html</link>
+      <description>Evento finalizado. Puesta en escena de talento local.</description>
+      <pubDate>Sat, 24 Jan 2026 00:00:00 GMT</pubDate>
+      <category>Teatro (#009bdb)</category>
+    </item>
+
+    <item>
+      <title>Ocine los Fresnos (Finalizado)</title>
+      <link>eventos.html</link>
+      <description>Evento finalizado. Estrenos de temporada de invierno.</description>
+      <pubDate>Sat, 14 Feb 2026 00:00:00 GMT</pubDate>
+      <category>Cine (#009bdb)</category>
+    </item>
+
+    <item>
+      <title>Museo de Bellas Artes (Finalizado)</title>
+      <link>eventos.html</link>
+      <description>Evento finalizado. Obras desde el medievo hasta el s. XX.</description>
+      <pubDate>Sat, 14 Mar 2026 00:00:00 GMT</pubDate>
+      <category>Arte (#ff7b00)</category>
     </item>
 
   </channel>
