@@ -1,7 +1,7 @@
 # Mi Proyecto: HAPPINESS&Co
 
 <p align="center">
-  <img src="assets/imagenes/happines-and-co-propuesta-02.jpg" alt="Logo Happiness & Co" width="450" style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+  <img src="LenguajeDeMarcas/assets/imagenes/happines-and-co-propuesta-02.jpg" alt="Logo Happiness & Co" width="450">
 </p>
 
 Este es el repositorio donde estaré subiendo todo el proyecto de la agenda cultural HAPPINESS&Co, una web para descubrir eventos culturales de Asturias: música, teatro, cine, arte, festivales y mucho más.
