@@ -32,6 +32,9 @@ He organizado el proyecto en las carpetas que nos pedían:
   - `header-footer.css` — Estilos del header y footer.
   - `componentes.css` — Estilos de tarjetas, botones y elementos reutilizables.
   - `hero-secciones.css` — Estilos del hero y las secciones principales.
+  - `fuentes.html` — Tabla con el origen de la información e imágenes del proyecto.
+  - `contacto.html` — Información de contacto con iconos y enlaces directos.
+
 
 - **Base de datos:** Tablas en Oracle SQL Developer (Eventos, Usuarios, Galerias, Imagenes y Favoritos) con datos de prueba, IDs automaticos, constraints y vistas. El diagrama E-R está hecho en Dia y TOAD. Los scripts están organizados en subcarpetas según el programa que use (Oracle, Toad, Dia).
 
@@ -73,6 +76,7 @@ He seguido los colores del PDF:
 - **Optimización de RSS para local** — Usar nombres de mis archivos (como eventos.html) en los links del XML para que no den error.
 - **Sincronización de Git** — Solucionar errores de push haciendo pull para bajar los cambios que había en GitHub y que no tenía en mi ordenador.
 - **Mejoras en el menú de Java** — Hacer que el programa te liste primero los datos que ya existen (como los emails o IDs) antes de pedirte escribir nada, para que sea mucho más fácil de usar y no haya fallos.
+
 
 ## Lo que he usado
 
