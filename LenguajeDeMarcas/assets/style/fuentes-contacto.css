@@ -1,0 +1,218 @@
+/* ---- PÁGINA FUENTES ---- */
+.fuentes-seccion {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+}
+
+.fuentes-titulo {
+    display: block;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.fuentes-subtitulo {
+    text-align: center;
+    color: #888;
+    margin-bottom: 2.5rem;
+}
+
+.fuentes-textos {
+    background: #fdf0f8;
+    border-left: 5px solid var(--color-rosa);
+    padding: 1.2rem 1.5rem;
+    border-radius: 0.6rem;
+    margin-bottom: 2.5rem;
+}
+
+.fuentes-textos h2 {
+    margin: 0 0 0.5rem 0;
+    color: var(--color-rosa);
+    font-size: 1.1rem;
+}
+
+.fuentes-textos p {
+    margin: 0;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+.fuentes-tipografia {
+    background: #f0f8ff;
+    border-left: 5px solid var(--color-azul);
+    padding: 1.2rem 1.5rem;
+    border-radius: 0.6rem;
+    margin-bottom: 2.5rem;
+}
+
+.fuentes-tipografia h2 {
+    margin: 0 0 0.5rem 0;
+    color: var(--color-azul);
+    font-size: 1.1rem;
+}
+
+.fuentes-tipografia p {
+    margin: 0;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+.fuentes-videos {
+    background: #fff4eb;
+    border-left: 5px solid var(--color-naranja);
+    padding: 1.2rem 1.5rem;
+    border-radius: 0.6rem;
+    margin-bottom: 2.5rem;
+}
+
+.fuentes-videos h2 {
+    margin: 0 0 0.5rem 0;
+    color: var(--color-naranja);
+    font-size: 1.1rem;
+}
+
+.fuentes-videos p {
+    margin: 0;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+.fuentes-imagenes-titulo {
+    color: var(--color-azul);
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.fuentes-imagenes-desc {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.2rem;
+}
+
+.fuentes-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+}
+
+.fuentes-tabla thead tr {
+    background: linear-gradient(135deg, var(--color-rosa), var(--color-azul));
+}
+
+.fuentes-tabla th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    color: #fff;
+}
+
+.fuentes-tabla th:first-child {
+    border-radius: 0.5rem 0 0 0;
+}
+
+.fuentes-tabla th:last-child {
+    border-radius: 0 0.5rem 0 0;
+}
+
+.fuentes-tabla td {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.fuentes-tabla td:first-child {
+    font-weight: 600;
+}
+
+.fuentes-tabla td:last-child {
+    color: #555;
+}
+
+.fuentes-tabla tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.fuentes-aviso {
+    font-size: 0.82rem;
+    color: #999;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+/* ---- PÁGINA CONTACTO ---- */
+.contacto-seccion {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+}
+
+.contacto-titulo {
+    display: block;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.contacto-subtitulo {
+    text-align: center;
+    color: #888;
+    margin-bottom: 2.5rem;
+}
+
+.contacto-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contacto-card {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.3rem 1.5rem;
+    border-radius: 0.85rem;
+}
+
+.contacto-card--email {
+    background: #f0f8ff;
+    border-left: 5px solid var(--color-azul);
+}
+
+.contacto-card--telefono {
+    background: #fdf0f8;
+    border-left: 5px solid var(--color-rosa);
+}
+
+.contacto-card-icono {
+    font-size: 2rem;
+}
+
+.contacto-card-label {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.contacto-card--email a {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-azul);
+}
+
+.contacto-card--telefono a {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-rosa);
+}
+
+.contacto-horario {
+    font-size: 0.85rem;
+    color: #aaa;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Centrar subtítulos de secciones en Fuentes */
+.fuentes-seccion h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
